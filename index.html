@@ -1,27 +1,57 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style_1.css">
+    <title>Çağın Tunç</title>
 </head>
 <body>
-    <div class="main_content">
-        <div class="container">
-            <img src="images/cagin_photo.jpeg" class="cagin_photo">
+    <div class="row">
+        <div class="column column-1">
+            <div class="main_content">
+                <div class="container_1">
+                    <img src="images/cagin_photo.jpeg" class="cagin_photo">
+                </div>
+                <div class="container_1">
+                    <h1>Çağın Tunç</h1>
+                </div>
+                <div class="container_buttons">
+                    <button class="main_button" onclick="showSection('education')">Education</button>
+                </div>
+                <div class="container_buttons">
+                    <button class="main_button" onclick="showSection('professions')">Professions</button>
+                </div>
+                <div class="container_buttons">
+                    <button class="main_button" onclick="showSection('awards')">Awards</button>
+                </div>
+                <div class="container_buttons">
+                    <button class="main_button" onclick="showSection('contact')">Contact</button>
+                </div>
+            </div>
         </div>
-        <div class="container">
-            <h1>Çağın Tunç</h1>
+        <div class="column column-2" id="right-column">
+            <div id="education" class="section">
+                <h2>Education Section</h2>
+                <p>Content related to education...</p>
+            </div>
+
+            <div id="professions" class="section">
+                <h2>Professions Section</h2>
+                <p>Content related to professions...</p>
+            </div>
+
+            <div id="awards" class="section">
+                <h2>Awards Section</h2>
+                <p>Content related to awards...</p>
+            </div>
+
+            <div id="contact" class="section">
+                <h2>Contact Section</h2>
+                <p>Contact information...</p>
+            </div>
         </div>
-        <div class="container_buttons">
-            <button class="main_button">Education</button> 
-        </div>
-        <div class="container_buttons">
-            <button class="main_button">Professions</button>
-        </div>
-        <div class="container_buttons">
-            <button class="main_button">Awards</button>
-        </div>
-        <div class="container_buttons">
-            <button class="main_button">Contact</button>
-        </div> <br>
     </div>
+            
+    <script src="script.js"></script>
 </body>
+</html>
