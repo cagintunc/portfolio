@@ -1,0 +1,52 @@
+h1 {
+    color:rgba(72, 48, 9, 0.799);
+    font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif;
+
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    justify-content: center; /* Horizontally center items */
+    padding-top: 15px;
+}
+
+.cagin_photo {
+    width: 55%;
+    max-width: 300px;
+    border-radius: 25%;
+    box-shadow: 0 20px 18px rgba(0, 0, 0, 0.5);
+
+}
+
+.container_buttons {
+    display: flex;
+    flex-wrap: wrap; /* Allow flex items to wrap */
+    justify-content: center; /* Horizontally center items */
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.main_button {
+    width: 50%;
+    height: 90%;
+    max-width: 300px;
+    min-height: 49px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(195, 172, 124, 0.571);
+    transition: background-color 0.3s; /* Add transition for smoother color change */
+}
+.main_button:hover {
+    background-color: rgba(72, 48, 9, 0.799);
+    color: rgb(233, 233, 233);
+}
+
+.main_content {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    background-color: #657abf27;
+    border-radius: 2%;
+}
