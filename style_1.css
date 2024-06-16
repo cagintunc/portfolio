@@ -3,7 +3,22 @@ h1 {
     font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif;
 
 }
+body {
+    min-width: 900px;
+}
 
+th, td {
+    border: 0px solid black; /* Add borders to cells */
+    padding: 10px; /* Add padding to cells */
+    text-align: left; /* Align text to the left */
+}
+th {
+    background-color:rgba(9, 46, 72, 0.799); /* Background color for header cells */
+    color:#ffffff;
+}
+table {
+    background-color: #402f692c;
+}
 
 .container_1 {
     display: flex;
@@ -19,6 +34,7 @@ h1 {
 .column-2 {
     max-width: 70%; /* Ensure columns don't get too wide */
     display: none;
+    border-radius: 0% 5% 0% 5% ;
 }
 
 
@@ -56,6 +72,7 @@ p {
     display: table;
     clear: both;
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 2200px) {
@@ -123,6 +140,6 @@ p {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
-    background-color: #657abf27;
+    background-color: #402f692c;
     border-radius: 0%;
 }
