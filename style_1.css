@@ -4,6 +4,7 @@ h1 {
 
 }
 
+
 .container_1 {
     display: flex;
     flex-wrap: wrap; /* Allow flex items to wrap */
@@ -11,16 +12,32 @@ h1 {
     padding-top: 15px;
 }
 
+.column-1 {
+    max-width: 20%;
+    min-width: 200px;
+}
+.column-2 {
+    max-width: 70%; /* Ensure columns don't get too wide */
+    display: none;
+}
 
-.container_1 > h1 {
-    font-size: 150%;
-    justify-content: center;
+
+#last_container {
+    padding-bottom: 15px;
+}
+
+.section > .Headers > h1 {
+    font-size: 110%;
+}
+
+p {
+    font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif;
 }
 
 .row {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap */
-    justify-content: space-around; /* Distribute items evenly with space around */
+    justify-content: center; /* Distribute items evenly with space around */
 }
 
 .column {
@@ -29,19 +46,11 @@ h1 {
     padding: 20px;
     border: 1px solid #ccc;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
-    min-width: 200px; /* Ensure columns don't get too small */
+    /**min-width: 200px; /* Ensure columns don't get too small */
     text-align: left;
     background-color: #ffffff;
 }
-.column-1 {
-    width: 300px;
-    float: center;
-}
-.column-2 {
-    max-width: 30%; /* Ensure columns don't get too wide */
-    float: left;
-    display: none;
-}
+
 .row:after {
     content: "";
     display: table;
@@ -57,6 +66,11 @@ h1 {
         background-image: url("images/SC.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+
+    }
+    .container_1 > h1 {
+        font-size: 110%;
+        justify-content: center;
     }
    
 }
@@ -69,26 +83,24 @@ h1 {
         background-image: url("images/SC2.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-size: 200%;
+        background-size: 250%;
+    }
+    .container_1 > h1 {
+        font-size: 90%;
+        justify-content: center;
     }
     
 }
 
 .cagin_photo {
-    width: 35%;
-    max-width: 190px;
+    width: 45%;
+    max-width: 290px;
+    min-width: 70px;
     border-radius: 50%;
     box-shadow: 0 20px 18px rgba(0, 0, 0, 0.5);
 
 }
 
-.container_buttons {
-    display: flex;
-    flex-wrap: wrap; /* Allow flex items to wrap */
-    justify-content: center; /* Horizontally center items */
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
 
 .main_button {
     width: 50%;
@@ -99,6 +111,7 @@ h1 {
     border-radius: 5px;
     background-color: rgba(124, 135, 195, 0.571);
     transition: background-color 0.3s; /* Add transition for smoother color change */
+    min-width: 110px;
 }
 .main_button:hover {
     background-color: rgba(9, 46, 72, 0.799);
