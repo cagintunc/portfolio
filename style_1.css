@@ -1,24 +1,46 @@
 h1 {
     color:rgba(72, 48, 9, 0.799);
-    font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif;
 
 }
 body {
     min-width: 900px;
 }
 
-th, td {
+.main_table th, .main_table td {
     border: 0px solid black; /* Add borders to cells */
     padding: 10px; /* Add padding to cells */
     text-align: left; /* Align text to the left */
 }
-th {
+.main_table th {
     background-color:rgba(9, 46, 72, 0.799); /* Background color for header cells */
     color:#ffffff;
 }
-table {
+.main_table {
     background-color: #402f692c;
+    width: 100%;
 }
+.university_logo_uc {
+    margin-left: -55%;
+}
+.university_logo_iyte {
+    margin-right: -40%;
+}
+.UCBerkeley {
+    width: 45%;
+    max-width: 500px;
+    max-height: 150px;
+
+}
+.center {
+    text-align: center;
+}
+
+.iztech {
+    width: 20%;
+    max-width: 200px;
+}
+
+
 
 .container_1 {
     display: flex;
@@ -46,9 +68,6 @@ table {
     font-size: 110%;
 }
 
-p {
-    font-family: Avantgarde, "TeX Gyre Adventor", "URW Gothic L", sans-serif;
-}
 
 .row {
     display: flex;
@@ -133,6 +152,17 @@ p {
 .main_button:hover {
     background-color: rgba(9, 46, 72, 0.799);
     color: rgb(233, 233, 233);
+}
+
+.table_button {
+    border: none;
+    border-radius: 5px;
+    background-color: #4e3c772c;  
+    padding: 8px;
+}
+.table_button:hover {
+    background-color:rgba(9, 46, 72, 0.799); /* Background color for header cells */
+    color:#ffffff;
 }
 
 .main_content {

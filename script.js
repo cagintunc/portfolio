@@ -14,3 +14,7 @@ function showSection(sectionId) {
         document.getElementById("right-column").style.display = "block";
     }
 }
+
+function goToUrl(url) {
+    window.location.href = url;
+}
