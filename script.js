@@ -18,3 +18,26 @@ function showSection(sectionId) {
 function goToUrl(url) {
     window.location.href = url;
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Select all elements with the class 'profession_type_1'
+    const professionItems = document.querySelectorAll('.profession_type_1, .profession_type_2');
+
+    professionItems.forEach(item => {
+        item.addEventListener('click', function() {
+            // Toggle the 'large-width' class
+            item.classList.toggle('large-width');
+
+            // Adjust visibility of .descr based on current state
+            const isExpanded = item.classList.contains('large-width');
+            const descr = item.querySelector('.descr');
+            if (descr) {
+                descr.style.display = isExpanded ? 'block' : 'none';
+            }
+        });
+    });
+});
+
+
+
+
