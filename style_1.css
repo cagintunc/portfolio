@@ -99,8 +99,30 @@ body {
     width: 8%;
 }
 
+.profession_type_1 {
+    background-color: #160042dc;
+    border-radius: 0% 5% 5% 5% / 25% 25% 25% 25%;
+    color: rgb(233, 233, 233);
+    margin-bottom: 10px;
+    padding-bottom: 25px;
+    width: 30%; /* Default smaller width */
+    margin-right: 65%;
+    left: 0px;
+    transition: width 0.9s ease; /* Smooth transition for width and margin-right change */
+    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+}
+
+.profession_type_1.large-width {
+    width: 80%; /* Larger width when expanded */
+}
+
+.profession_type_1.large-width .descr {
+    left: auto;
+    display: block; /* Display .descr content only when .profession_type_1 is expanded */
+}
+
 .profession_type_2 {
-    background-color: #273095aa;
+    background-color: #1006a2d6;
     border-radius: 5% 0% 5% 5% / 25% 25% 25% 25%;
     color:rgb(233, 233, 233);
     margin-left: 65%;
@@ -111,12 +133,11 @@ body {
     transition: margin-left 0.9s ease; /* Smooth transition for margin-left and width change */
     cursor: pointer; /* Change cursor to pointer to indicate clickable */
 }
-
-
 .profession_type_2 > .date, .profession_type_2 > .title {
     text-align: right;
     margin-right: 30px;
 }
+
 .profession_type_2.large-width {
     right: 140px;
     margin-left: 32%;
@@ -127,27 +148,6 @@ body {
     right: auto; /* Reset right position */
     display: block; /* Display .descr content only when .profession_type_2 is expanded */
 }
-
-
-.profession_type_1 {
-    background-color: #34337fdc;
-    border-radius: 0% 5% 5% 5% / 25% 25% 25% 25%;
-    color:rgb(233, 233, 233);
-    margin-bottom: 10px;
-    padding-bottom: 25px;
-    width: 30%; /* Default smaller width */
-    transition: width 0.9s ease; /* Smooth transition for width change */
-    cursor: pointer; /* Change cursor to pointer to indicate clickable */
-}
-
-.profession_type_1.large-width {
-    width: 80%; /* Larger width when expanded */
-}
-
-.profession_type_1.large-width .descr {
-    display: block; /* Display .descr content only when .profession_type_1 is expanded */
-}
-
 
 .descr {
     display: none;
