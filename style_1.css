@@ -3,9 +3,101 @@ h1 {
 
 }
 body {
+    margin: 0;
+    padding: 0;
+    position: relative;
     min-width: 900px;
+    min-height: 100vh; /* Ensure the body takes the full height of the viewport */
 }
-/* Custom icon style for ul elements directly under .ul_prof */
+
+body::before {
+    content: "";
+    position: fixed; /* Fixed position ensures it stays in place even if the page scrolls */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("images/back.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0.6;
+    z-index: -1; /* Place it behind the content */
+}
+
+/* Ensure the content is above the background */
+body > * {
+    position: relative;
+    z-index: 1;
+}
+
+.award_class {
+    background-color: #402f6910;
+    border-radius: 5%;
+}
+
+.award_picture {
+    text-align: center;
+    position: relative; /* Position the image relative to its parent */
+    /*border-radius: 8% / 7%;*/
+    padding: 10px;
+    margin-top: 0px;
+    margin-left: 120px;
+    margin-right:120px;
+    background-color:rgb(255, 255, 255);
+}
+#2.award_picture:hover img {
+    display: block;
+}
+
+.award_header {
+    font-size: 100%;
+    color:rgba(72, 48, 9, 0.799);
+    padding-top: 10px;
+    margin-left: 1%;
+}
+
+.success_icon_img {
+    max-width: 25px;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+.success_name {
+    width: 100%;
+}
+
+.next_button {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    max-width: 50px;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 10px 10px;
+    color: white; /* Optional styling */
+    border: none; /* Optional styling */
+    cursor: pointer;
+}
+.back_button {
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    max-width: 50px;
+    transform: translate(-50%, -50%);
+    display: none;
+    padding: 10px 10px;
+    color: white; /* Optional styling */
+    border: none; /* Optional styling */
+    cursor: pointer;
+}
+.award_picture:hover .next_button, .award_picture:hover .back_button {
+    display: block;
+}
+.award_pict {
+    position: relative;
+    width: 97%;
+}
+
 .ul_prof {
     list-style: none; /* Remove the default list style */
     padding: 0;
@@ -63,7 +155,7 @@ body {
     text-align: left; /* Align text to the left */
 }
 .main_table th {
-    background-color:rgba(9, 46, 72, 0.799); /* Background color for header cells */
+    background-color:#850808ca; /* Background color for header cells */
     color:#ffffff;
 }
 .main_table {
@@ -100,7 +192,7 @@ body {
 }
 
 .profession_type_1 {
-    background-color: #160042dc;
+    background-color: #76020eb7;
     border-radius: 0% 5% 5% 5% / 25% 25% 25% 25%;
     color: rgb(233, 233, 233);
     margin-bottom: 10px;
@@ -122,7 +214,7 @@ body {
 }
 
 .profession_type_2 {
-    background-color: #1006a2d6;
+    background-color: #a23206ca;
     border-radius: 5% 0% 5% 5% / 25% 25% 25% 25%;
     color:rgb(233, 233, 233);
     margin-left: 65%;
@@ -159,12 +251,6 @@ body {
     padding-top: 15px;
 }
 
-.column-1 {
-    max-width: 20%;
-    width: auto;
-    min-width: 200px;
-    max-height: 500px;
-}
 .column-2 {
     max-width: 70%;
     display: none;
@@ -210,35 +296,36 @@ body {
     .column {
         flex: 1 1 45%; /* Adjust to two columns on medium screens */
     }
-    body {
-        background-image: url("images/SC.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-
-    }
     .container_1 > h1 {
         font-size: 110%;
         justify-content: center;
     }
-   
+    .column-1 {
+        max-width: 20%;
+        width: auto;
+        min-width: 200px;
+        max-height: 490px;
+    }
 }
 
-@media (max-width: 1000px) {
+
+@media (max-width: 1200px) {
     .column {
         flex: 1 1 100%; /* Adjust to one column on small screens */
-    }
-    body {
-        background-image: url("images/SC2.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-size: 250%;
     }
     .container_1 > h1 {
         font-size: 90%;
         justify-content: center;
     }
-    
+    .column-1 {
+        max-width: 20%;
+        width: auto;
+        min-width: 200px;
+        max-height: 450px;
+    }
 }
+
+
 
 .cagin_photo {
     width: 45%;
@@ -249,20 +336,19 @@ body {
 
 }
 
-
 .main_button {
     width: 50%;
-    height: 90%;
+    height: 60%;
     max-width: 300px;
-    min-height: 49px;
+    min-height: 30px;
     border: none;
     border-radius: 5px;
-    background-color: rgba(124, 135, 195, 0.571);
+    background-color: #af823392;
     transition: background-color 0.3s; /* Add transition for smoother color change */
     min-width: 110px;
 }
 .main_button:hover {
-    background-color: rgba(9, 46, 72, 0.799);
+    background-color: #850808ca;;
     color: rgb(233, 233, 233);
 }
 

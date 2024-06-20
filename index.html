@@ -10,7 +10,7 @@
         <div class="column column-1">
             <div class="main_content">
                 <div class="container_1">
-                    <img src="images/cagin_photo.jpeg" class="cagin_photo">
+                    <img src="images/cagin (1).jpg" class="cagin_photo">
                 </div>
                 <div class="container_1">
                     <h1>Çağın Tunç</h1>
@@ -22,14 +22,18 @@
                     <button class="main_button" onclick="showSection('education')">Education</button>
                 </div>
                 <div class="container_1">
-                    <button class="main_button" onclick="showSection('professions')">Professions</button>
+                    <button class="main_button" onclick="showSection('professions')">Experience</button>
                 </div>
                 <div class="container_1">
                     <button class="main_button" onclick="showSection('awards')">Awards</button>
                 </div>
+                <div class="container_1">
+                    <button class="main_button" onclick="showSection('projects')">Projects</button>
+                </div>
                 <div class="container_1" id="last_container">
                     <button class="main_button" onclick="showSection('contact')">Contact</button>
                 </div>
+
             </div>
         </div>
         <div class="column column-2" id="right-column" style="display: none;">
@@ -98,7 +102,7 @@
 
             <div id="professions" class="section">
                 <div class="Headers">
-                    <h1>Professions</h1>
+                    <h1>Experience</h1>
                 </div>
                 <ul class="ul_prof">
                     <li class="profession_type_1">
@@ -192,6 +196,58 @@
                 <div class="Headers">
                     <h1>Awards</h1>
                 </div>
+                <div class="award_class" id="1">
+                    <div class="award_header_div">
+                        <table class="award_table">
+                            <tr>
+                                <td>
+                                    <div class="success_icon">
+                                        <img src="images/icons/success.png" class="success_icon_img">
+                                    </div>
+                                </td>
+                                <td class="success_name">
+                                    <h2 class="award_header">Hackathon - Hack4Treat</h2>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="award_picture" id="1">
+                        <img src="images/cagin (2).jpeg" class="award_pict">
+                    </div>
+                    <p>
+                    Explanation.....
+                    <br>
+                    Please go to <a href="https://bulten.iyte.edu.tr/2021/11/11/hack4treat-hackathonu-odulleri-sahiplerini-buldu-2/">this site</a> in order to reach the original competition results.
+                    </p>
+                </div>
+                <div class="award_class" id="2">
+                    <div class="award_header_div">
+                        <table class="award_table">
+                            <tr>
+                                <td>
+                                    <div class="success_icon">
+                                        <img src="images/icons/success.png" class="success_icon_img">
+                                    </div>
+                                </td>
+                                <td class="success_name">
+                                    <h2 class="award_header">High Technology Awards</h2>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="award_picture" id="2">
+                        <img src="images/cagin (3).jpeg" class="award_pict">
+                        <img src="images/buttons/next_button.png" class="next_button" onclick='showPicture(this)'>
+                    </div>
+
+                    <p>
+                        Explanation.....
+                        <br>
+                        Please go to <a href="https://teknoparkizmir.com.tr/tr/haberler/teknopark-tan-haberler/teknopark-izmir-yuksek-teknoloji-odulleri-4-kez-sahiplerini-buldu/">this site</a> to read the original content.
+                        </p>
+
+
+                </div>
                 <p>Content related to awards...</p>
             </div>
 
@@ -200,6 +256,13 @@
                     <h1>Contact</h1>
                 </div>
                 <p>Contact information...</p>
+            </div>
+
+            <div id="projects" class="section">
+                <div class="Headers">
+                    <h1>Projects</h1>
+                </div>
+                <p>Projects information...</p>
             </div>
         </div>
     </div>
