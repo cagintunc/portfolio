@@ -32,8 +32,10 @@ body > * {
 }
 
 .award_class {
-    background-color: #402f6910;
+    background-color: #402f6936;
     border-radius: 5%;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
 }
 
 .award_picture {
@@ -55,6 +57,7 @@ body > * {
     color:rgba(72, 48, 9, 0.799);
     padding-top: 10px;
     margin-left: 1%;
+    min-width: 100px;
 }
 
 .success_icon_img {
@@ -96,6 +99,14 @@ body > * {
 .award_pict {
     position: relative;
     width: 97%;
+}
+.award_description {
+    background-color: #ffffff;;
+    margin: 2% 10% 5% 10%;
+    padding: 2px 30px 2px 20px;
+    text-align: left;
+    border: 1px solid black; /* Border around the line */
+    box-shadow: 0 0 5px black; 
 }
 
 .ul_prof {
@@ -196,6 +207,7 @@ body > * {
     border-radius: 0% 5% 5% 5% / 25% 25% 25% 25%;
     color: rgb(233, 233, 233);
     margin-bottom: 10px;
+    box-shadow: 0 0 5px rgb(123, 68, 68); 
     padding-bottom: 25px;
     width: 30%; /* Default smaller width */
     margin-right: 65%;
@@ -221,6 +233,7 @@ body > * {
     right: 0px;
     margin-bottom: 10px;
     padding-bottom: 25px;
+    box-shadow: 0 0 5px rgb(123, 87, 68); 
     width: 30%; /* Default smaller width */
     transition: margin-left 0.9s ease; /* Smooth transition for margin-left and width change */
     cursor: pointer; /* Change cursor to pointer to indicate clickable */
@@ -325,6 +338,27 @@ body > * {
     }
 }
 
+@media (min-width: 355px) and (max-width: 435px) and (min-height: 660px) and (max-height: 940px) {
+    .column-1 {
+        min-width: 540px;
+        min-height: 1200px;
+        margin-top: 30%;
+    }
+    .main_content {
+        min-width: 90%;
+        min-height: 90%;
+        font-size: 150% !important; 
+    }
+    .container_1 {
+        text-align: center;
+        min-height: 100px;
+    }
+    .main_button {
+        min-height: 80px !important;
+        font-size: 90% !important; 
+    }
+
+}
 
 
 .cagin_photo {
@@ -371,3 +405,5 @@ body > * {
     background-color: #402f692c;
     border-radius: 0%;
 }
+
+
