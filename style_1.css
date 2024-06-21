@@ -1,13 +1,11 @@
-h1 {
-    color:rgba(72, 48, 9, 0.799);
 
-}
 body {
     margin: 0;
     padding: 0;
     position: relative;
     min-width: 900px;
     min-height: 100vh; /* Ensure the body takes the full height of the viewport */
+    font-family: sans-serif;
 }
 
 body::before {
@@ -32,8 +30,8 @@ body > * {
 }
 
 .award_class {
-    background-color: #402f6936;
-    border-radius: 5%;
+    background-color: #EEEEEE;
+    border-radius: 2% 0% 15% 0%;
     padding-bottom: 3px;
     margin-bottom: 10px;
 }
@@ -42,11 +40,11 @@ body > * {
     text-align: center;
     position: relative; /* Position the image relative to its parent */
     /*border-radius: 8% / 7%;*/
-    padding: 10px;
+    padding: 5px 2px 2px 2px;
     margin-top: 0px;
     margin-left: 120px;
     margin-right:120px;
-    background-color:rgb(255, 255, 255);
+    background-color:#31304D;
 }
 #2.award_picture:hover img {
     display: block;
@@ -54,10 +52,10 @@ body > * {
 
 .award_header {
     font-size: 100%;
-    color:rgba(72, 48, 9, 0.799);
     padding-top: 10px;
     margin-left: 1%;
     min-width: 100px;
+
 }
 
 .success_icon_img {
@@ -111,7 +109,7 @@ body > * {
 
 .ul_prof {
     list-style: none; /* Remove the default list style */
-    padding: 0;
+    padding-left: 30px;
 }
 
 .ul_prof > li.profession_type_1 {
@@ -134,26 +132,6 @@ body > * {
     margin-left: 8px;
 }
 
-.ul_prof > li.profession_type_2 {
-    position: relative;
-    padding-left: 30px; /* Adjust this value based on the icon size */
-    line-height: 1.5;
-}
-
-.ul_prof > li.profession_type_2 ::before {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 10px;
-    transform: translateY(-50%);
-    width: 20px; /* Set the desired width of the icon */
-    height: 20px; /* Set the desired height of the icon */
-    background-image: url("images/icons/date_bullet.png");
-    background-size: contain; /* Ensure the image fits within the dimensions */
-    background-repeat: no-repeat;
-    margin-right: 8px;
-}
-
 /* Default bullet style for ul elements inside .descr */
 .descr ul {
     list-style: disc; /* Use default disc bullets */
@@ -166,12 +144,13 @@ body > * {
     text-align: left; /* Align text to the left */
 }
 .main_table th {
-    background-color:#850808ca; /* Background color for header cells */
+    background-color: #393E46; /* Background color for header cells */
     color:#ffffff;
 }
 .main_table {
-    background-color: #402f692c;
+    background-color: #EEEEEE;
     width: 100%;
+    border: none;
 }
 .university_logo_uc {
     margin-left: -55%;
@@ -203,21 +182,19 @@ body > * {
 }
 
 .profession_type_1 {
-    background-color: #76020eb7;
+    background-color: #053B50;
     border-radius: 0% 5% 5% 5% / 25% 25% 25% 25%;
     color: rgb(233, 233, 233);
     margin-bottom: 10px;
-    box-shadow: 0 0 5px rgb(123, 68, 68); 
+    box-shadow: 0 0 5px #053B50; 
     padding-bottom: 25px;
     width: 30%; /* Default smaller width */
-    margin-right: 65%;
-    left: 0px;
     transition: width 0.9s ease; /* Smooth transition for width and margin-right change */
     cursor: pointer; /* Change cursor to pointer to indicate clickable */
 }
 
 .profession_type_1.large-width {
-    width: 80%; /* Larger width when expanded */
+    width: 90%; /* Larger width when expanded */
 }
 
 .profession_type_1.large-width .descr {
@@ -225,34 +202,13 @@ body > * {
     display: block; /* Display .descr content only when .profession_type_1 is expanded */
 }
 
-.profession_type_2 {
-    background-color: #a23206ca;
-    border-radius: 5% 0% 5% 5% / 25% 25% 25% 25%;
-    color:rgb(233, 233, 233);
-    margin-left: 65%;
-    right: 0px;
-    margin-bottom: 10px;
-    padding-bottom: 25px;
-    box-shadow: 0 0 5px rgb(123, 87, 68); 
-    width: 30%; /* Default smaller width */
-    transition: margin-left 0.9s ease; /* Smooth transition for margin-left and width change */
-    cursor: pointer; /* Change cursor to pointer to indicate clickable */
+#1.profession_type_1 {
+    margin-left: 0px;
 }
-.profession_type_2 > .date, .profession_type_2 > .title {
-    text-align: right;
-    margin-right: 30px;
+#2.profession_type_1{
+    margin-left: 150px !important;
 }
 
-.profession_type_2.large-width {
-    right: 140px;
-    margin-left: 32%;
-    width: 80%; /* Larger width when expanded */
-}
-
-.profession_type_2.large-width .descr {
-    right: auto; /* Reset right position */
-    display: block; /* Display .descr content only when .profession_type_2 is expanded */
-}
 
 .descr {
     display: none;
@@ -284,6 +240,7 @@ body > * {
     display: flex;
     flex-wrap: wrap; /* Allow items to wrap */
     justify-content: center; /* Distribute items evenly with space around */
+    margin-top: 2%;
 }
 
 .column {
@@ -377,13 +334,15 @@ body > * {
     min-height: 30px;
     border: none;
     border-radius: 5px;
-    background-color: #af823392;
+    background-color: #393E46;
+    color: #ffffff;
     transition: background-color 0.3s; /* Add transition for smoother color change */
     min-width: 110px;
+    font-family: sans-serif;
 }
 .main_button:hover {
-    background-color: #850808ca;;
-    color: rgb(233, 233, 233);
+    background-color: #00ADB5;
+    color: rgb(0, 0, 0);
 }
 
 .table_button {
@@ -402,7 +361,7 @@ body > * {
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
-    background-color: #402f692c;
+    background-color: #EEEEEE;
     border-radius: 0%;
 }
 
