@@ -45,13 +45,13 @@ function showPicture(button) {
     const button_name = button.classList[0];
 
     if (button_name == "next_button") {
-        imgElement.setAttribute("src", "images/cagin (4).jpeg")
+        imgElement.setAttribute("src", "images/cagin (4).png")
         const button = parent.querySelector(".next_button");
         button.setAttribute("src", "images/buttons/back_button.png");
         button.setAttribute("class", "back_button");
     }
     else {
-        imgElement.setAttribute("src", "images/cagin (3).jpeg")
+        imgElement.setAttribute("src", "images/cagin (3).png")
         const button = parent.querySelector(".back_button");
         button.setAttribute("src", "images/buttons/next_button.png");
         button.setAttribute("class", "next_button");
