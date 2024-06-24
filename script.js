@@ -13,7 +13,37 @@ function showSection(sectionId) {
         // Show the right column when a section is shown
         document.getElementById("right-column").style.display = "block";
     }
+    const contact_tmp = document.getElementById("right-column");
+    if (sectionId === "contact") {
+        
+        if (contact_tmp) {
+            contact_tmp.style.maxWidth = "60%";
+        }
+        
+    } else {
+        if (contact_tmp) {
+            contact_tmp.style.maxWidth = "70%";
+        }
+    }
 }
+
+function showContactTable(button) {
+    const className = button.className;
+    let hiddenSection;
+    if (className === "contact_1") {
+        hiddenSection = document.getElementsByClassName("contact_table_1")[0];
+    } else {
+        hiddenSection = document.getElementsByClassName("contact_table_2")[0];
+    }
+
+    // Toggle display style between 'none' and 'block'
+    if (hiddenSection.style.display === "none" || hiddenSection.style.display === "") {
+        hiddenSection.style.display = "block";
+    } else {
+        hiddenSection.style.display = "none";
+    }
+}
+
 
 function goToUrl(url) {
     window.location.href = url;
@@ -57,3 +87,5 @@ function showPicture(button) {
         button.setAttribute("class", "next_button");
     }
 }
+
+
