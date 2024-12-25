@@ -17,12 +17,20 @@ function showSection(sectionId) {
     if (sectionId === "contact") {
         
         if (contact_tmp) {
-            contact_tmp.style.maxWidth = "60%";
+            contact_tmp.style.maxWidth = "50%";
         }
         
     } else {
         if (contact_tmp) {
-            contact_tmp.style.maxWidth = "70%";
+            if (sectionId === "professions") {
+                contact_tmp.style.maxWidth = "50%";
+            }
+            else if (sectionId === "awards") {
+                contact_tmp.style.maxWidth = "50%";
+            }
+            else {
+                contact_tmp.style.maxWidth = "70%";
+            }
         }
     }
 }
@@ -43,6 +51,29 @@ function showContactTable(button) {
         hiddenSection.style.display = "none";
     }
 }
+
+function showAwardDesc(id) {
+    const current_awards = document.getElementsByClassName("award_description");
+    const arrow_icons = document.getElementsByClassName("down_arrow");
+    var award = null;
+    var icon = null;
+
+    for (i=0;i<current_awards.length;i++) {
+        if (current_awards[i].id == id) {
+            award =current_awards[i];
+            icon = arrow_icons[i];
+            break;
+        }
+    }
+    if (award.style.display === 'none') {
+        award.style.display = 'block';
+        icon.src = "images/buttons/arrow_up_wight.png";
+    } else {
+        award.style.display = 'none';
+        icon.src = "images/buttons/arrow_down_wight.png";
+    }
+}
+
 
 
 function goToUrl(url) {
