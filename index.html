@@ -1,27 +1,501 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style_1.css">
+    <title>Çağın Tunç</title>
 </head>
 <body>
-    <div class="main_content">
-        <div class="container">
-            <img src="images/cagin_photo.jpeg" class="cagin_photo">
+    <div class="row">
+        <div class="column column-1">
+            <div class="main_content">
+                <div class="container_1">
+                    <img src="images/cagin (1).jpg" class="cagin_photo">
+                </div>
+                <div class="container_1" id="container_name">
+                    <h1>Çağın Tunç</h1>
+                    <svg height="10" width="80%">
+                        <line x1="0" y1="0" x2="100%" y2="0" style="stroke:black;stroke-width:2" />
+                    </svg>
+                </div>
+                <div class="container_1">
+                    <button class="main_button" onclick="showSection('education')">Education</button>
+                </div>
+                <div class="container_1">
+                    <button class="main_button" onclick="showSection('professions')">Experience</button>
+                </div>
+                <div class="container_1">
+                    <button class="main_button" onclick="showSection('awards')">Awards</button>
+                </div>
+                <div class="container_1">
+                    <button class="main_button" onclick="showSection('projects')">Projects</button>
+                </div>
+                <div class="container_1" id="last_container">
+                    <button class="main_button" onclick="showSection('contact')">Contact</button>
+                </div>
+
+            </div>
         </div>
-        <div class="container">
-            <h1>Çağın Tunç</h1>
+        <div class="column column-2" id="right-column" style="display: none;">
+            <div id="education" class="section">
+                <div class="Headers">
+                    <h1>Education</h1>
+                </div>
+                <div class="EducationParagraph">
+                    <table class="main_table">
+                        <tr>
+                            <th>School</th>
+                            <th>Country</th>
+                            <th>Department</th>
+                            <th>CumGPA</th>
+                            <th>Date</th>
+                        </tr>
+                        <tr>
+                            <td>
+                                UC Berkeley
+                            </td>
+                            
+                            <td>United States of America, CA</td>
+                            <td>Master of Engineering</td>
+                            <td>-/4.0</td>
+                            <td>2024-2025</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Izmir Institute of Technology
+                            </td>
+                            
+                            <td>Turkey, Izmir</td>
+                            <td>Computer Engineering</td>
+                            <td>3.95/4.0</td>
+                            <td>2020-2024</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                Izmir Institute of Technology
+                            </td>
+
+                            <td>Turkey, Izmir</td>
+                            <td>Bioengineering</td>
+                            <td>3.91/4.0</td>
+                            <td>2018-2020</td>
+                        </tr>
+                        
+                    </table>
+                    <p>Content related to education...</p>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="university_logo_iyte">
+                                    <img src="images/universities/iyte_logo-tur.png" class="iztech" onclick="goToUrl('https://en.iyte.edu.tr/')">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="university_logo_uc" id="berkeley-logo">
+                                    <img src="images/universities/UC-Berkeley-Simbolo.png" class="UCBerkeley" onclick="goToUrl('https://www.berkeley.edu/')">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div id="professions" class="section">
+                <div class="Headers">
+                    <h1>Experience</h1>
+                </div>
+                <ul class="ul_prof">
+                    <div class="prof" id="prof_1">
+                        <li class="profession_type_1">
+                            <div class="date">11/2022-07/2023</div>
+                            <div class="prof_table_div">
+                                <table class="table_prof">
+                                    <tr>
+                                        <td class="profession_table_column" id="1">
+                                            <div class="profession_icon">
+                                                <img src="images/icons/company.png" style="width:25px;">
+                                            </div>
+                                        </td>
+                                        <td class="profession_table_column" id="2">
+                                            <div class="title">Eczacıbaşı</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="position_icon_div">
+                                                <img src="images/icons/position.png" style="width:20px;">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="title">Data Scientist</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="descr">
+                                <ul>
+                                    <li>
+                                        Gathered and processed customer transaction data, product information, and sales records
+                                    </li>
+                                    <li>
+                                        Integrated IoT sensors and devices into the existing infrastructure for real-time data collection
+                                    </li>
+                                    <li>
+                                        Managed databases, including PostgreSQL, and InfluxDB, for data storage and organization
+                                    </li>
+                                    <li>
+                                        Developed data collection scripts using Python to interact with IoT devices
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="prof" id="prof_2">
+                        <li class="profession_type_1">
+                            <div class="date">07/2022-09/2022</div>
+                            <div class="prof_table_div">
+                                <table class="table_prof">
+                                    <tr>
+                                        <td class="profession_table_column" id="1">
+                                            <div class="profession_icon">
+                                                <img src="images/icons/company.png" style="width:25px;">
+                                            </div>
+                                        </td>
+                                        <td class="profession_table_column" id="2">
+                                            <div class="title">İşBank, Frankfurt</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="position_icon_div">
+                                                <img src="images/icons/position.png" style="width:20px;">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="title">IT Intern</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="descr">
+                                <ul>
+                                    <li>
+                                        Microsoft Azure cloud computing services
+                                    </li>
+                                    <li>
+                                        Agile software development
+                                    </li>
+                                    <li>
+                                        Creating and maintaining databases with using MySQL and SQL
+                                    </li>
+                                    <li>
+                                        Solving problems using Python and PowerShell script
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="prof" id="prof_3">
+                        <li class="profession_type_1">
+                            <div class="date">12/2021-06/2022</div>
+                            <div class="prof_table_div">
+                                <table class="table_prof">
+                                    <tr>
+                                        <td class="profession_table_column" id="1">
+                                            <div class="profession_icon">
+                                                <img src="images/icons/company.png" style="width:25px;">
+                                            </div>
+                                        </td>
+                                        <td class="profession_table_column" id="2">
+                                            <div class="title">TÜBİTAK</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="position_icon_div">
+                                                <img src="images/icons/position.png" style="width:20px;">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="title">Data Scientist</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            
+                            <div class="descr">
+                                <ul>
+                                    <li>
+                                        Working on the multidisciplinary project supported by TÜBİTAK.
+                                    </li>
+                                    <li>
+                                        Working on the Background Subtraction methods on the live stream scene. Most of the methods are made from scratch to satisfy the necessary effects
+                                    </li>
+                                    <li>
+                                        Using Python to implement the algorithms. Working with OpenCV, Scikit-İmage, NumPy modules to write expressive code
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="prof" id="prof_4">
+                        <li class="profession_type_1">
+                            <div class="date">07/2021-08/2022</div>
+                            <div class="prof_table_div">
+                                <table class="table_prof">
+                                    <tr>
+                                        <td class="profession_table_column" id="1">
+                                            <div class="profession_icon">
+                                                <img src="images/icons/company.png" style="width:25px;">
+                                            </div>
+                                        </td>
+                                        <td class="profession_table_column" id="2">
+                                            <div class="title">LBMS</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="position_icon_div">
+                                                <img src="images/icons/position.png" style="width:20px;">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="title">Researcher</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="descr">
+                                <ul>
+                                    <li>
+                                        Using standard techniques and optimization algorithms and build neural networks
+                                    </li>
+                                    <li>
+                                        Using strategies for reducing errors in ML systems, understand complex ML settings, and apply end-to-end, transfer, and multi-task learning
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                    <div class="prof" id="prof_5">
+                        <li class="profession_type_1">
+                            <div class="date">08/2020-01/2021</div>
+                            <div class="prof_table_div">
+                                <table class="table_prof">
+                                    <tr>
+                                        <td class="profession_table_column" id="1">
+                                            <div class="profession_icon">
+                                                <img src="images/icons/company.png" style="width:25px;">
+                                            </div>
+                                        </td>
+                                        <td class="profession_table_column" id="2">
+                                            <div class="title">Non-RNA Lab</div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="position_icon_div">
+                                                <img src="images/icons/position.png" style="width:20px;">
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div class="title">Researcher</div>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="descr">
+                                <ul>
+                                    <li>
+                                        Apply data science tools and techniques. Getting, cleaning, and exploring data, programming in R and Python, and conducting reproducible research
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+
+            <div id="awards" class="section">
+                <div class="Headers">
+                    <h1>Awards</h1>
+                </div>
+                <div class="award_class" id="1">
+                    <div class="award_header_div">
+                        <table class="award_table">
+                            <tr>
+                                <td>
+                                    <div class="success_icon">
+                                        <img src="images/icons/success.png" class="success_icon_img">
+                                    </div>
+                                </td>
+                                <td class="success_name">
+                                    <h2 class="award_header">Hackathon - Hack4Treat</h2>
+                                </td>
+                            </tr>
+                            
+                        </table>
+                    </div>
+                    
+                    <div class="award_picture" id="1">
+                        <img src="images/cagin (2).png" class="award_pict">
+                        
+                    </div>
+                    <div class="award_desc_container">
+                        <div class="award_description_arrow" onclick="showAwardDesc(1)" id="1">
+                            <img src="images/buttons/arrow_down_wight.png" class="down_arrow" id="1">
+                        </div>
+                    </div>
+                    <div class="award_description" id ="1">
+                        <div class="award_desc">
+                            <p>
+                            Our team (Epione) participated in a prestigious competition 
+                            focused on utilizing artificial intelligence to develop 
+                            innovative solutions for individuals with disabilities 
+                            resulting from stroke. Through our collaborative efforts and 
+                            groundbreaking approach, we successfully secured the first-place position. 
+                            This achievement not only earned us a substantial prize of 25,000 TL but also 
+                            provided us with the opportunity to establish a startup company within our 
+                            university’s technology center.
+                            <br><br>
+                            Please visit <a href="https://bulten.iyte.edu.tr/2021/11/11/hack4treat-hackathonu-odulleri-sahiplerini-buldu-2/">this site</a> in order to reach the original competition results.
+                            </p>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="award_class" id="2">
+                    <div class="award_header_div">
+                        <table class="award_table">
+                            <tr>
+                                <td>
+                                    <div class="success_icon">
+                                        <img src="images/icons/success.png" class="success_icon_img">
+                                    </div>
+                                </td>
+                                <td class="success_name">
+                                    <h2 class="award_header">High Technology Awards</h2>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="award_picture" id="2">
+                        <img src="images/cagin (3).png" class="award_pict">
+                        <img src="images/buttons/next_button.png" class="next_button" onclick='showPicture(this)'>
+                    </div>
+                    <div class="award_desc_container" onclick="showAwardDesc(2)" id="2">
+                        <div class="award_description_arrow">
+                            <img src="images/buttons/arrow_down_wight.png" class="down_arrow" id="2">
+                        </div>
+                    </div>
+                    <div class="award_description" id="2">
+                        <div class="award_desc">
+                            <p>
+                                Our startup, which focuses on creating advanced AI solutions to treat stroke patients, 
+                                has been honored with the "High Technology Award." This accolade recognizes our commitment to 
+                                leveraging cutting-edge technology to address critical healthcare challenges. The award highlights 
+                                our innovative approach and the significant impact our solutions have on enhancing the quality 
+                                of life for individuals affected by stroke.
+                            <br><br>
+                            Please visit <a href="https://teknoparkizmir.com.tr/tr/haberler/teknopark-tan-haberler/teknopark-izmir-yuksek-teknoloji-odulleri-4-kez-sahiplerini-buldu/">this site</a> to read the original content.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="contact" class="section">
+                <div class="Headers">
+                    <h1>Contact</h1>
+                </div>
+                <br>
+                <div class="contact_div">
+                    <div class="contact_2" onclick="showContactTable(this)">
+                        <h1>Professional</h1>    
+                    </div>
+                    
+                    <table class="contact_table_2" style="display: none;">
+                        <tr>
+                            <td class="col1">
+                                <div class="researchgate_contact">
+                                    <img src="images/icons/researchgate.png" class="col_img">
+                                </div>
+                            </td>
+                            <td class="col2"><a href="https://www.researchgate.net/profile/Cagin-Tunc">Research Gate</a></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">
+                                <div class="github_contact">
+                                    <img src="images/icons/github_icon.png" class="col_img">
+                                </div>
+                            </td>
+
+                            <td class="col2"><a href="https://github.com/cagintunc">GitHub</a></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">
+                                <div class="berkeley_contact">
+                                    <img src="images/universities/berkeley_cal.png" class="col_img">
+                                </div>
+                            </td>
+                            <td class="col2"><a href="mailto:cagin_tunc@berkeley.edu">Berkeley</a></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">
+                                <div class="personal_email_contact">
+                                    <img src="images/icons/email_send_icon.png" class="col_img">
+                                </div>
+                            </td>
+                            <td class="col2"><a href="mailto:cagintunc@hotmail.com">Personal</a></td>
+                        </tr>
+                    </table>
+                    <br>
+                    <div class="contact_1" onclick="showContactTable(this)">
+                        <h1>Social Media</h1>    
+                    </div>
+                    <table class="contact_table_1" style="display: none">
+                        
+                        <tr>
+                            <td class="col1">
+                                <div class="instagram_contact">
+                                    <img src="images/icons/instagram_icon.png" class="col_img">
+                                </div>
+                            </td>
+                            <td class="col2">cagintunc</td>
+                        </tr>
+                        <tr>
+                            <td class="col1">
+                                <div class="discord_contact">
+                                    <img src="images/icons/discord.png" class="col_img">
+                                </div>
+                            </td>
+                            <td class="col2">cagintunc</td>
+                        </tr>
+                        <tr>
+                            <td class="col1">
+                                <div class="linkedin_contact">
+                                    <img src="images/icons/linkedin_social_icon.png" class="col_img">
+                                </div>
+                            </td>
+                            <td class="col2"><a href='https://www.linkedin.com/in/çağın-tunç-computer-scientist/'>LinkedIn</href></td>
+                        </tr>
+                    </table>
+                    <div class="contact_vector">
+                        <img src="images/backgrounds/communication_transparent.png" class="communication">
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="section">
+                <div class="Headers">
+                    <h1>Projects</h1>
+                </div>
+                <p>Projects information...</p>
+            </div>
         </div>
-        <div class="container_buttons">
-            <button class="main_button">Education</button> 
-        </div>
-        <div class="container_buttons">
-            <button class="main_button">Professions</button>
-        </div>
-        <div class="container_buttons">
-            <button class="main_button">Awards</button>
-        </div>
-        <div class="container_buttons">
-            <button class="main_button">Contact</button>
-        </div> <br>
     </div>
+            
+    <script src="script.js"></script>
 </body>
+</html>
