@@ -180,6 +180,8 @@ body > * {
     background-color: #393E46;
     border-radius: 10% 10% 50% 50%;
 }
+
+
 .award_description_arrow:hover {
     background-color: #00adb5;
     color: rgb(0, 0, 0);
@@ -212,6 +214,16 @@ body > * {
     padding-right: 5%;
     
 }
+
+.line {
+    text-align: center;
+}
+
+.education_desc{
+    margin-left: 30px;
+    text-align: left;
+}
+
 
 .ul_prof {
     list-style: none; /* Remove the default list style */
@@ -428,7 +440,7 @@ body > * {
     }
 }
 
-@media (min-width: 355px) and (max-width: 435px) and (min-height: 660px) and (max-height: 940px) {
+@media (min-width: 155px) and (max-width: 1000px) and (min-height: 660px) and (max-height: 940px) {
     .column-1 {
         min-width: 540px;
         min-height: 1200px;
@@ -446,6 +458,13 @@ body > * {
     .main_button {
         min-height: 80px !important;
         font-size: 90% !important; 
+    }
+    .column-2 {
+        min-width: 600px !important;
+        font-size: 150% !important; 
+    }
+    .award_desc p {
+        font-size: 30px !important;
     }
 
 }
