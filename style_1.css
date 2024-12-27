@@ -126,7 +126,7 @@ body > * {
     font-size: 100%;
     padding-top: 10px;
     margin-left: 1%;
-    min-width: 100px;
+    min-width: 90%;
 
 }
 
@@ -166,7 +166,7 @@ body > * {
 
 
 .down_arrow {
-    width: 7%;
+    width: 20px;
     position: relative;
 }
 .award_desc_container {
@@ -176,10 +176,50 @@ body > * {
 .award_description_arrow {
     cursor: pointer;
     display: inline-block; /* Allows centering via text-align */
-    width: 60%;
+    width: 15%;
     background-color: #393E46;
     border-radius: 10% 10% 50% 50%;
 }
+
+
+.project_icon {
+    width:40px;
+}
+.project_name {
+    width: 100%;
+    margin-bottom: 25px;
+}
+.project_container_table {
+    background-color: #EEEEEE;
+    border-radius: 2% 0% 15% 0%;
+    padding-bottom: 3px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    width: 90%;
+}
+.project_container_table:hover {
+    background-color: #00adb5;
+}
+.project_pict {
+    position: relative;
+    width: 30%;
+}
+.project_description {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 5%;
+    display: none;
+}
+.project_arrow_down {
+    text-align: right;
+    margin-top: -20px;
+}
+.down_arrow_projects {
+    width: 20px;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
 
 
 .award_description_arrow:hover {
