@@ -32,8 +32,11 @@ function showSection(sectionId) {
                 else if (sectionId === "awards") {
                     contact_tmp.style.maxWidth = "50%";
                 }
+                else if (sectionId === "education") {
+                    contact_tmp.style.maxWidth = "70%"
+                }
                 else {
-                    contact_tmp.style.maxWidth = "70%";
+                    contact_tmp.style.maxWidth = "27%";
                 }
             }
         }
@@ -159,6 +162,20 @@ function showPicture(button, id) {
             button.setAttribute("src", "images/buttons/next_button.png");
             button.setAttribute("class", "next_button");
         }
+    }
+}
+
+function showProjectDescription(id) {
+    const descriptions = document.getElementsByClassName("project_description");
+    const match = descriptions[id-1];
+    const arrow = document.getElementsByClassName("project_arrow_down")[id-1];
+
+    if (match.style.display === "none" || match.style.display === "") {
+        match.style.display = "block";
+        arrow.style.display = "none";
+    } else {
+        match.style.display = "none";
+        arrow.style.display = "block";
     }
 }
 
