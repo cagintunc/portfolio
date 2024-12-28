@@ -195,6 +195,9 @@ body > * {
     padding-bottom: 3px;
     margin-bottom: 10px;
     cursor: pointer;
+    width: 95%;
+}
+.project_name_col {
     width: 90%;
 }
 .project_container_table:hover {
@@ -218,6 +221,17 @@ body > * {
     width: 20px;
     position: relative;
     transform: rotate(-45deg);
+}
+.github_project_code {
+    transition: transform 1s ease;
+    width: 90%;
+    cursor: pointer;
+}
+.github_project_code:hover {
+    transform: rotate(-360deg);
+}
+.project_table_col1 {
+    width: 50px;
 }
 
 
