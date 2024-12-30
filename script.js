@@ -17,11 +17,13 @@ function showSection(sectionId) {
         document.getElementById("right-column").style.display = "block";
     }
     const contact_tmp = document.getElementById("right-column");
+    const left_column = document.getElementById("left-column");
     if(width > 1000) {
         if (sectionId === "contact") {
             
             if (contact_tmp) {
                 contact_tmp.style.maxWidth = "50%";
+                
             }
             
         } else {
@@ -31,9 +33,11 @@ function showSection(sectionId) {
                 }
                 else if (sectionId === "awards") {
                     contact_tmp.style.maxWidth = "50%";
+                    
                 }
                 else if (sectionId === "education") {
                     contact_tmp.style.maxWidth = "70%"
+                    
                 }
                 else {
                     contact_tmp.style.maxWidth = "35%";
@@ -46,7 +50,6 @@ function showSection(sectionId) {
             document.getElementById("contact").style.fontSize = "30px";    
             if (contact_tmp) {
                 contact_tmp.style.minWidth = "90%";
-                contact_tmp.style.maxWidth = "100%";
             }
             
         } else {

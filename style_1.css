@@ -473,7 +473,39 @@ body > * {
         max-width: 20%;
         width: auto;
         min-width: 200px;
-        max-height: 490px;
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 1700px) {
+    .column {
+        flex: 1 1 45%; /* Adjust to two columns on medium screens */
+    }
+    .container_1 > h1 {
+        font-size: 110%;
+        justify-content: center;
+    }
+    .column-1 {
+        max-width: 20%;
+        width: auto;
+        min-width: 200px;
+        max-height: 550px;
+    }
+}
+
+@media (max-width: 1500px) {
+    .column {
+        flex: 1 1 45%; /* Adjust to two columns on medium screens */
+    }
+    .container_1 > h1 {
+        font-size: 110%;
+        justify-content: center;
+    }
+    .column-1 {
+        max-width: 20%;
+        width: auto;
+        min-width: 200px;
+        max-height: 500px;
     }
 }
 
