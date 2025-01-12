@@ -169,6 +169,7 @@ function showPicture(button, id) {
 }
 
 function showProjectDescription(id) {
+    const width = window.innerWidth;
     const descriptions = document.getElementsByClassName("project_description");
     const match = descriptions[id-1];
     const arrow = document.getElementsByClassName("project_arrow_down")[id-1];
@@ -179,18 +180,35 @@ function showProjectDescription(id) {
     if (match.style.display === "none" || match.style.display === "") {
         let video_array = [];
         if (is_project_video(project_videos_class, id)) {
-            contact_tmp.style.maxWidth = "60%";
-            for (i=0; i < project_videos_class.length;i++) {
-                video_array.push(project_videos_class[i].id);
-            }
-            for (i=0; i < project_container_table.length; i++) {
-                if(i != id-1) {
-                    project_container_table[i].style.maxWidth = "45%";
-                    if(descriptions[i].style.display === "block" && video_array.includes(project_container_table[i].id)) {
-                        project_container_table[i].style.maxWidth = "95%";    
+            if (width > 900) {
+                contact_tmp.style.maxWidth = "60%";
+                for (i=0; i < project_videos_class.length;i++) {
+                    video_array.push(project_videos_class[i].id);
+                }
+                for (i=0; i < project_container_table.length; i++) {
+                    if(i != id-1) {
+                        project_container_table[i].style.maxWidth = "45%";
+                        if(descriptions[i].style.display === "block" && video_array.includes(project_container_table[i].id)) {
+                            project_container_table[i].style.maxWidth = "95%";    
+                        }
+                    } else {
+                        project_container_table[i].style.maxWidth = "95%";
                     }
-                } else {
-                    project_container_table[i].style.maxWidth = "95%";
+                }
+            } else {
+                contact_tmp.style.maxWidth = "95%";
+                for (i=0; i < project_videos_class.length;i++) {
+                    video_array.push(project_videos_class[i].id);
+                }
+                for (i=0; i < project_container_table.length; i++) {
+                    if(i != id-1) {
+                        project_container_table[i].style.maxWidth = "95%";
+                        if(descriptions[i].style.display === "block" && video_array.includes(project_container_table[i].id)) {
+                            project_container_table[i].style.maxWidth = "95%";    
+                        }
+                    } else {
+                        project_container_table[i].style.maxWidth = "95%";
+                    }
                 }
             }
 
@@ -204,9 +222,15 @@ function showProjectDescription(id) {
         match.style.display = "none";
         arrow.style.display = "block";
         if (is_project_video(project_videos_class, id)) {
-            project_container_table[id-1].style.maxWidth = "45%";
-            check_videos(project_videos_class, id, 
-                contact_tmp, project_container_table, descriptions);
+            if (width > 900) {
+                project_container_table[id-1].style.maxWidth = "45%";
+                check_videos(project_videos_class, id, 
+                    contact_tmp, project_container_table, descriptions);
+            } else {
+                project_container_table[id-1].style.maxWidth = "95%";
+                check_videos(project_videos_class, id, 
+                    contact_tmp, project_container_table, descriptions);
+            }
         }
     }
 }
