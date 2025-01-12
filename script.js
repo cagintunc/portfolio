@@ -47,7 +47,7 @@ function showSection(sectionId) {
     } else {
         
         if (sectionId === "contact") {
-            document.getElementById("contact").style.fontSize = "30px";    
+            document.getElementById("contact").style.fontSize = "10px";    
             if (contact_tmp) {
                 contact_tmp.style.minWidth = "90%";
             }
@@ -55,11 +55,11 @@ function showSection(sectionId) {
         } else {
             if (contact_tmp) {
                 if (sectionId === "professions") {
-                    document.getElementById("professions").style.fontSize = "30px";  
+                    document.getElementById("professions").style.fontSize = "10px";  
                     contact_tmp.style.maxWidth = "90%";
                 }
                 else if (sectionId === "awards") {
-                    document.getElementById("awards").style.fontSize = "30px";  
+                    document.getElementById("awards").style.fontSize = "10px";  
                     contact_tmp.style.maxWidth = "90%";
                 }
                 else {
