@@ -345,26 +345,18 @@ body > * {
     color: #ffffff;
 }
 
-.university_logo_uc {
-    margin-left: -55%;
-}
-.university_logo_iyte {
-    margin-right: -40%;
+.iztech {
+    width: 100%;
+    cursor: pointer;
 }
 .UCBerkeley {
-    width: 45%;
-    max-width: 500px;
-    max-height: 150px;
-    cursor: pointer; 
-}
-.center {
-    text-align: center;
+    width: 100%;
+    cursor: pointer;
 }
 
-.iztech {
-    width: 20%;
-    max-width: 200px;
-    cursor: pointer; 
+
+.center {
+    text-align: center;
 }
 
 .business_icon {
