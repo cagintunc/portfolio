@@ -105,7 +105,7 @@ body > * {
 
 .award_class {
     background-color: #EEEEEE;
-    border-radius: 2% 0% 15% 0%;
+    border-radius: 0% 20% 0% 20%;
     padding-bottom: 3px;
     margin-bottom: 10px;
 }
@@ -191,7 +191,7 @@ body > * {
 }
 .project_container_table {
     background-color: #EEEEEE;
-    border-radius: 2% 0% 15% 0%;
+    border-radius: 0% 10% 0% 10%;
     padding-bottom: 3px;
     margin-bottom: 10px;
     cursor: pointer;
@@ -286,7 +286,8 @@ body > * {
     padding-top: 20px;
     padding-bottom: 20px;
     background-color: #EEEEEE;
-    border-radius: 5% 0% 5% 0%;
+    border-radius: 0% 5% 0% 5%;
+    justify-content: center;
 }
 
 .ul_prof > .prof > li.profession_type_1 {
@@ -307,6 +308,12 @@ body > * {
     background-size: contain; /* Ensure the image fits within the dimensions */
     background-repeat: no-repeat;
     margin-left: 8px;
+}
+
+.date {
+    margin-left: 10%;
+    font-size: 90%;
+    justify-content: right;
 }
 
 /* Default bullet style for ul elements inside .descr */
@@ -368,7 +375,7 @@ body > * {
 }
 
 .profession_type_1 {
-    border-radius: 0% 5% 5% 5% / 25% 25% 25% 25%;
+    border-radius: 0% 5% 0% 5% / 25% 25% 25% 25%;
     color: rgb(233, 233, 233);
     margin-bottom: 10px;
     box-shadow: 0 0 5px #053B50; 
@@ -576,7 +583,7 @@ body > * {
 }
 
 
-@media (max-width: 700px) {
+@media (max-width: 890px) {
     .column {
         flex: 1 1 100%; /* Adjust to one column on small screens */
     }
@@ -594,6 +601,15 @@ body > * {
         display: block; /* Ensure the SVG takes up its own line */
         margin-top: 10px; /* Add some space above the SVG */
     }
+
+    #prof_2, #prof_3, #prof_4 {
+        padding-left: 0;
+        margin-left: 0;
+    }
+    .ul_prof {
+        justify-content: center;
+        padding-left: 5px;
+    }
     .column-1 {
         max-width: 20%;
         width: auto;
@@ -608,7 +624,7 @@ body > * {
 }
 
 
-@media (max-width: 500px) {
+@media (max-width: 550px) {
     .row {
         flex-direction: column; /* Stack columns vertically */
         align-items: center; /* Center columns horizontally */
@@ -649,6 +665,11 @@ body > * {
         font-size: 0.4rem; /* Reduce font size for small screens */
         padding: 5px; /* Reduce padding */
     }
-    
+}
+
+@media (max-width: 500px) {
+    .date {
+        padding-left: 15%;
+    }
 }
 
