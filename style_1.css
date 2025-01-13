@@ -616,7 +616,7 @@ body > * {
 }
 
 
-@media (max-width: 550px) {
+@media (max-width: 585px) {
     .row {
         flex-direction: column; /* Stack columns vertically */
         align-items: center; /* Center columns horizontally */
