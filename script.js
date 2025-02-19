@@ -224,11 +224,11 @@ function showProjectDescription(id) {
         if (is_project_video(project_videos_class, id)) {
             if (width > 900) {
                 project_container_table[id-1].style.maxWidth = "45%";
-                check_videos(project_videos_class, id, 
+                check_videos(project_videos_class, 0, 
                     contact_tmp, project_container_table, descriptions);
             } else {
                 project_container_table[id-1].style.maxWidth = "95%";
-                check_videos(project_videos_class, id, 
+                check_videos(project_videos_class, 1, 
                     contact_tmp, project_container_table, descriptions);
             }
         }
@@ -249,9 +249,16 @@ function check_videos(video_classes, id,
     main_frame, project_frames, descriptions) {
         
         if (are_all_videos_closed(video_classes, descriptions)) {
-            main_frame.style.maxWidth = "35%";
-            for (i=0;i<project_frames.length;i++) {
-                project_frames[i].style.maxWidth = "95%";
+            if(id == 0){
+                main_frame.style.maxWidth = "35%";
+                for (i=0;i<project_frames.length;i++) {
+                    project_frames[i].style.maxWidth = "95%";
+                }
+            } else {
+                main_frame.style.maxWidth = "95%";
+                for (i=0;i<project_frames.length;i++) {
+                    project_frames[i].style.maxWidth = "95%";
+                }
             }
         } 
     }
