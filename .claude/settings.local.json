@@ -1,7 +1,8 @@
 {
   "permissions": {
     "allow": [
-      "Bash(find /c/Users/cagin/Desktop/YL/CV/portfolio -type f -name *.html -o -name *.css -o -name *.jpg -o -name *.png -o -name *.gif -o -name *.svg -o -name *.webp)"
+      "Bash(find /c/Users/cagin/Desktop/YL/CV/portfolio -type f -name *.html -o -name *.css -o -name *.jpg -o -name *.png -o -name *.gif -o -name *.svg -o -name *.webp)",
+      "Bash(git:*)"
     ]
   }
 }
