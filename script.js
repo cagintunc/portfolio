@@ -1,276 +1,207 @@
+/* =====================================================
+   ÇAĞIN TUNÇ PORTFOLIO — SCRIPT 2025
+   ===================================================== */
 
-function showSection(sectionId) {
-    const width = window.innerWidth;
-    const height = window.innerHeight;    
-    console.log(width, height);
-    var sections = document.getElementsByClassName("section");
-    for (var i = 0; i < sections.length; i++) {
-        sections[i].style.display = "none";
-    }
+// ── Navbar: scroll class & active link ──────────────
+const navbar   = document.getElementById('navbar');
+const sections = Array.from(document.querySelectorAll('section[id]'));
+const navLinks = Array.from(document.querySelectorAll('.nav-link'));
 
-    // Show the selected section
-    var section = document.getElementById(sectionId);
-    if (section) {
-        section.style.display = "block";
-        
-        // Show the right column when a section is shown
-        document.getElementById("right-column").style.display = "block";
-    }
-    const contact_tmp = document.getElementById("right-column");
-    const left_column = document.getElementById("left-column");
-    if(width > 1000) {
-        if (sectionId === "contact") {
-            
-            if (contact_tmp) {
-                contact_tmp.style.maxWidth = "50%";
-                
-            }
-            
-        } else {
-            if (contact_tmp) {
-                if (sectionId === "professions") {
-                    contact_tmp.style.maxWidth = "50%";
-                }
-                else if (sectionId === "awards") {
-                    contact_tmp.style.maxWidth = "50%";
-                    
-                }
-                else if (sectionId === "education") {
-                    contact_tmp.style.maxWidth = "70%"
-                    
-                }
-                else {
-                    contact_tmp.style.maxWidth = "35%";
-                }
-            }
+function onScroll() {
+  // scrolled class
+  navbar.classList.toggle('scrolled', window.scrollY > 40);
+
+  // active nav link
+  const mid = window.scrollY + window.innerHeight / 3;
+  let current = '';
+  sections.forEach(s => { if (s.offsetTop <= mid) current = s.id; });
+  navLinks.forEach(l => {
+    l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+  });
+}
+
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// ── Mobile nav toggle ────────────────────────────────
+const navToggle  = document.getElementById('navToggle');
+const navLinksEl = document.getElementById('navLinks');
+
+navToggle.addEventListener('click', () => navLinksEl.classList.toggle('open'));
+navLinks.forEach(l => l.addEventListener('click', () => navLinksEl.classList.remove('open')));
+
+// ── Scroll reveal (Intersection Observer) ───────────
+const revealObs = new IntersectionObserver(
+  entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+  { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+);
+document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ── Typed role animation ─────────────────────────────
+const roles = [
+  'AI/ML Engineer',
+  'Computer Vision Engineer',
+  'Software Engineer',
+  'Bioengineer',
+];
+
+const typedEl = document.getElementById('typedRole');
+let rIdx = 0, cIdx = 0, deleting = false;
+
+function type() {
+  const word = roles[rIdx];
+  typedEl.textContent = deleting ? word.slice(0, cIdx - 1) : word.slice(0, cIdx + 1);
+  deleting ? cIdx-- : cIdx++;
+
+  let delay = deleting ? 55 : 95;
+  if (!deleting && cIdx === word.length)      { delay = 2000; deleting = true; }
+  else if (deleting && cIdx === 0)            { deleting = false; rIdx = (rIdx + 1) % roles.length; delay = 380; }
+
+  setTimeout(type, delay);
+}
+type();
+
+// ── Particle canvas ──────────────────────────────────
+(function () {
+  const canvas = document.getElementById('heroCanvas');
+  const ctx    = canvas.getContext('2d');
+  let   pts    = [];
+
+  function resize() {
+    canvas.width  = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+
+  function Pt() {
+    this.reset = function () {
+      this.x  = Math.random() * canvas.width;
+      this.y  = Math.random() * canvas.height;
+      this.vx = (Math.random() - 0.5) * 0.38;
+      this.vy = (Math.random() - 0.5) * 0.38;
+      this.r  = Math.random() * 1.4 + 0.4;
+      this.a  = Math.random() * 0.38 + 0.08;
+    };
+    this.reset();
+    this.update = function () {
+      this.x += this.vx;
+      this.y += this.vy;
+      if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
+    };
+    this.draw = function () {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
+      ctx.fillStyle = 'rgba(34,211,238,' + this.a + ')';
+      ctx.fill();
+    };
+  }
+
+  function init() {
+    pts = [];
+    const n = Math.min(Math.floor(canvas.width * canvas.height / 11000), 130);
+    for (let i = 0; i < n; i++) pts.push(new Pt());
+  }
+
+  function connect() {
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const dx = pts[i].x - pts[j].x;
+        const dy = pts[i].y - pts[j].y;
+        const d  = Math.sqrt(dx * dx + dy * dy);
+        if (d < 105) {
+          ctx.beginPath();
+          ctx.moveTo(pts[i].x, pts[i].y);
+          ctx.lineTo(pts[j].x, pts[j].y);
+          ctx.strokeStyle = 'rgba(34,211,238,' + (0.07 * (1 - d / 105)) + ')';
+          ctx.lineWidth   = 0.6;
+          ctx.stroke();
         }
-    } else {
-        
-        if (sectionId === "contact") {
-            document.getElementById("contact").style.fontSize = "10px";    
-            if (contact_tmp) {
-                contact_tmp.style.minWidth = "90%";
-            }
-            
-        } else {
-            if (contact_tmp) {
-                if (sectionId === "professions") {
-                    document.getElementById("professions").style.fontSize = "10px";  
-                    contact_tmp.style.maxWidth = "90%";
-                }
-                else if (sectionId === "awards") {
-                    document.getElementById("awards").style.fontSize = "10px";  
-                    contact_tmp.style.maxWidth = "90%";
-                }
-                else {
-                    contact_tmp.style.maxWidth = "90%";
-                }
-            }
-        }
+      }
     }
+  }
+
+  function frame() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    pts.forEach(p => { p.update(); p.draw(); });
+    connect();
+    requestAnimationFrame(frame);
+  }
+
+  window.addEventListener('resize', () => { resize(); init(); });
+  resize(); init(); frame();
+})();
+
+// ── Project expand / collapse ────────────────────────
+function toggleProject(card) {
+  const isOpen = card.classList.contains('open');
+  // Close all open cards first (accordion)
+  document.querySelectorAll('.project-card.open').forEach(c => c.classList.remove('open'));
+  if (!isOpen) {
+    card.classList.add('open');
+    setTimeout(() => card.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 80);
+  }
 }
 
-function showContactTable(button) {
-    const className = button.className;
-    let hiddenSection;
-    if (className === "contact_1") {
-        hiddenSection = document.getElementsByClassName("contact_table_1")[0];
-    } else {
-        hiddenSection = document.getElementsByClassName("contact_table_2")[0];
-    }
+// ── Gallery carousels ────────────────────────────────
+document.querySelectorAll('.achievement-gallery, .program-gallery').forEach(gallery => {
+  // Skip galleries with only one image
+  if (gallery.children.length < 2) return;
 
-    // Toggle display style between 'none' and 'block'
-    if (hiddenSection.style.display === "none" || hiddenSection.style.display === "") {
-        hiddenSection.style.display = "block";
-    } else {
-        hiddenSection.style.display = "none";
-    }
-}
+  // Wrap in relative container
+  const wrap = document.createElement('div');
+  wrap.className = 'gallery-wrap';
+  gallery.parentNode.insertBefore(wrap, gallery);
+  wrap.appendChild(gallery);
 
-function showAwardDesc(id) {
-    const current_awards = document.getElementsByClassName("award_description");
-    const arrow_icons = document.getElementsByClassName("down_arrow");
-    var award = null;
-    var icon = null;
+  // Build nav buttons
+  const STEP = 230;
+  const chevronPrev = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>';
+  const chevronNext = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>';
 
-    for (i=0;i<current_awards.length;i++) {
-        if (current_awards[i].id == id) {
-            award =current_awards[i];
-            icon = arrow_icons[i];
-            break;
-        }
-    }
-    if (award.style.display === 'none' || award.style.display === "") {
-        award.style.display = 'block';
-        icon.src = "images/buttons/arrow_up_wight.png";
-    } else {
-        award.style.display = 'none';
-        icon.src = "images/buttons/arrow_down_wight.png";
-    }
-}
+  const prev = document.createElement('button');
+  prev.className = 'gallery-nav prev';
+  prev.setAttribute('aria-label', 'Previous');
+  prev.innerHTML = chevronPrev;
 
+  const next = document.createElement('button');
+  next.className = 'gallery-nav next';
+  next.setAttribute('aria-label', 'Next');
+  next.innerHTML = chevronNext;
 
+  wrap.appendChild(prev);
+  wrap.appendChild(next);
 
-function goToUrl(url) {
-    window.location.href = url;
-}
+  function updateNav() {
+    prev.classList.toggle('hidden', gallery.scrollLeft < 4);
+    next.classList.toggle('hidden', gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth - 4);
+  }
 
-document.addEventListener("DOMContentLoaded", function() {
-    // Select all elements with the class 'profession_type_1'
-    const professionItems = document.querySelectorAll('.profession_type_1, .profession_type_2');
+  prev.addEventListener('click', () => gallery.scrollBy({ left: -STEP, behavior: 'smooth' }));
+  next.addEventListener('click', () => gallery.scrollBy({ left:  STEP, behavior: 'smooth' }));
+  gallery.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
 
-    professionItems.forEach(item => {
-        item.addEventListener('click', function() {
-            // Toggle the 'large-width' class
-            item.classList.toggle('large-width');
-
-            // Adjust visibility of .descr based on current state
-            const isExpanded = item.classList.contains('large-width');
-            const descr = item.querySelector('.descr');
-            if (descr) {
-                descr.style.display = isExpanded ? 'block' : 'none';
-            }
-        });
-    });
+  // Touch swipe (horizontal drag)
+  let startX = 0;
+  gallery.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  gallery.addEventListener('touchend',   e => {
+    const diff = startX - e.changedTouches[0].clientX;
+    if (Math.abs(diff) > 40) gallery.scrollBy({ left: diff > 0 ? STEP : -STEP, behavior: 'smooth' });
+  }, { passive: true });
 });
 
+// ── Lightbox ─────────────────────────────────────────
+const lightbox    = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
 
-function showPicture(button, id) {
-    const parent = button.parentElement;
-    const imgElement = parent.querySelector(".award_pict");
-    const button_name = button.classList[0];
-    if (id == 2) {
-        if (button_name == "next_button") {
-            imgElement.setAttribute("src", "images/cagin (4).png")
-            const button = parent.querySelector(".next_button");
-            button.setAttribute("src", "images/buttons/back_button.png");
-            button.setAttribute("class", "back_button");
-        }
-        else {
-            imgElement.setAttribute("src", "images/cagin (3).png")
-            const button = parent.querySelector(".back_button");
-            button.setAttribute("src", "images/buttons/next_button.png");
-            button.setAttribute("class", "next_button");
-        }
-    } else if(id == 3) {
-        if (button_name === "next_button") {
-            imgElement.setAttribute("src", "images/glb/DSC08644.JPG");
-            const button = parent.querySelector(".next_button");
-            button.setAttribute("src", "images/buttons/back_button.png");
-            button.setAttribute("class", "back_button");
-        }
-        else {
-            imgElement.setAttribute("src", "images/glb/DSC08668.JPG")
-            const button = parent.querySelector(".back_button");
-            button.setAttribute("src", "images/buttons/next_button.png");
-            button.setAttribute("class", "next_button");
-        }
-    }
+function openLightbox(src) {
+  lightboxImg.src = src;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
 }
 
-function showProjectDescription(id) {
-    const width = window.innerWidth;
-    const descriptions = document.getElementsByClassName("project_description");
-    const match = descriptions[id-1];
-    const arrow = document.getElementsByClassName("project_arrow_down")[id-1];
-    const contact_tmp = document.getElementById("right-column");
-    const project_container_table = document.getElementsByClassName("project_container_table");
-    const project_videos_class = document.getElementsByClassName("project_video");
-
-    if (match.style.display === "none" || match.style.display === "") {
-        let video_array = [];
-        if (is_project_video(project_videos_class, id)) {
-            if (width > 900) {
-                contact_tmp.style.maxWidth = "60%";
-                for (i=0; i < project_videos_class.length;i++) {
-                    video_array.push(project_videos_class[i].id);
-                }
-                for (i=0; i < project_container_table.length; i++) {
-                    if(i != id-1) {
-                        project_container_table[i].style.maxWidth = "45%";
-                        if(descriptions[i].style.display === "block" && video_array.includes(project_container_table[i].id)) {
-                            project_container_table[i].style.maxWidth = "95%";    
-                        }
-                    } else {
-                        project_container_table[i].style.maxWidth = "95%";
-                    }
-                }
-            } else {
-                contact_tmp.style.maxWidth = "95%";
-                for (i=0; i < project_videos_class.length;i++) {
-                    video_array.push(project_videos_class[i].id);
-                }
-                for (i=0; i < project_container_table.length; i++) {
-                    if(i != id-1) {
-                        project_container_table[i].style.maxWidth = "95%";
-                        if(descriptions[i].style.display === "block" && video_array.includes(project_container_table[i].id)) {
-                            project_container_table[i].style.maxWidth = "95%";    
-                        }
-                    } else {
-                        project_container_table[i].style.maxWidth = "95%";
-                    }
-                }
-            }
-
-        }
-
-        match.style.display = "block";
-        arrow.style.display = "none";
-        
-
-    } else {
-        match.style.display = "none";
-        arrow.style.display = "block";
-        if (is_project_video(project_videos_class, id)) {
-            if (width > 900) {
-                project_container_table[id-1].style.maxWidth = "45%";
-                check_videos(project_videos_class, 0, 
-                    contact_tmp, project_container_table, descriptions);
-            } else {
-                project_container_table[id-1].style.maxWidth = "95%";
-                check_videos(project_videos_class, 1, 
-                    contact_tmp, project_container_table, descriptions);
-            }
-        }
-    }
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
 }
 
-function is_project_video(array, id) {
-    let result = false;
-    for(i=0;i<array.length;i++) {
-        if(array[i].id == id) {
-            result = true;
-        }
-    }
-    return result;
-}
-
-function check_videos(video_classes, id, 
-    main_frame, project_frames, descriptions) {
-        
-        if (are_all_videos_closed(video_classes, descriptions)) {
-            if(id == 0){
-                main_frame.style.maxWidth = "35%";
-                for (i=0;i<project_frames.length;i++) {
-                    project_frames[i].style.maxWidth = "95%";
-                }
-            } else {
-                main_frame.style.maxWidth = "95%";
-                for (i=0;i<project_frames.length;i++) {
-                    project_frames[i].style.maxWidth = "95%";
-                }
-            }
-        } 
-    }
-
-function are_all_videos_closed(video_classes, descriptions) {
-    let result = true;
-    for(i=0;i<video_classes.length; i++) {
-        if (descriptions[video_classes[i].id-1].style.display === "block") {
-            result=false;
-            return result;
-        }
-    }
-    return result;
-}
-
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });

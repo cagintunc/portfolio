@@ -1,950 +1,707 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style_1.css">
-    <title>Çağın Tunç</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Çağın Tunç — Computer Scientist</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style_1.css">
 </head>
 <body>
-    <div class="row">
-        <div class="column column-1" id="left-column">
-            <div class="main_content">
-                <div class="container_1">
-                    <img src="images/cagin (1).jpg" class="cagin_photo">
-                </div>
-                <div class="container_1" id="container_name">
-                    <h1>Çağın Tunç</h1>
-                    <svg height="10" width="80%" style="display: block; margin: 0 auto;">
-                        <line x1="0" y1="5" x2="100%" y2="5" style="stroke:black; stroke-width:2"></line>
-                    </svg>
-                </div>
-                <div class="container_1">
-                    <button class="main_button" onclick="showSection('education')">Education</button>
-                </div>
-                <div class="container_1">
-                    <button class="main_button" onclick="showSection('professions')">Experience</button>
-                </div>
-                <div class="container_1">
-                    <button class="main_button" onclick="showSection('awards')">Achievements</button>
-                </div>
-                <div class="container_1">
-                    <button class="main_button" onclick="showSection('projects')">Projects</button>
-                </div>
-                <div class="container_1" id="last_container">
-                    <button class="main_button" onclick="showSection('contact')">Contact</button>
-                </div>
 
-            </div>
-        </div>
-        <div class="column column-2" id="right-column" style="display: none;">
-            <div id="education" class="section">
-                <div class="Headers">
-                    <h1>Education</h1>
-                </div>
-                <div class="EducationParagraph">
-                    <table class="main_table" id="main_edu_table">
-                        <tr>
-                            <th style="width:15%;">Institution</th>
-                            <th style="width:10%;">Country</th>
-                            <th style="width:30%;">Department</th>
-                            <th>CumGPA</th>
-                            <th>Date</th>
-                        </tr>
-                        <tr>
-                            <td>
-                                UC Berkeley
-                            </td>
-                            
-                            <td>USA</td>
-                            <td>Master of Engineering</td>
-                            <td>3.87/4.0</td>
-                            <td>2024-2025</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                IZTECH
-                            </td>
-                            
-                            <td>Turkey</td>
-                            <td>Computer Engineering</td>
-                            <td>3.95/4.0</td>
-                            <td>2020-2024</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                IZTECH
-                            </td>
-
-                            <td>Turkey</td>
-                            <td>Bioengineering</td>
-                            <td>3.91/4.0</td>
-                            <td>2018-2020</td>
-                        </tr>
-                        
-                    </table>
-                    
-
-                    <table>
-                        <tr>
-                            <td style="width: 9%;">
-                                <div class="university_logo_iyte">
-                                    <img src="images/universities/iyte_logo-tur.png" class="iztech" onclick="goToUrl('https://en.iyte.edu.tr/')">
-                                </div>
-                            </td>
-                            <td style="width: 30%;">
-                                <div class="university_logo_uc" id="berkeley-logo">
-                                    <img src="images/universities/UC-Berkeley-Simbolo.png" class="UCBerkeley" onclick="goToUrl('https://www.berkeley.edu/')">
-                                </div>
-                            </td>
-                            <td style="width: 60%;"></td>
-                        </tr>
-                    </table>
-                    
-                </div>
-            </div>
-
-            <div id="professions" class="section">
-                <div class="Headers">
-                    <h1>Experience</h1>
-                </div>
-                <ul class="ul_prof">
-                    <div class="prof" id="prof_1">
-                        <li class="profession_type_1">
-                            <div class="prof_table_div">
-                                <table class="table_prof">
-                                    <tr>
-                                        <td class="profession_table_column" id="1">
-                                            <div class="profession_icon">
-                                                <img src="images/icons/company.png" style="width:25px;">
-                                            </div>
-                                        </td>
-                                        <td class="profession_table_column" id="2">
-                                            <div class="title">Eczacıbaşı</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="position_icon_div">
-                                                <img src="images/icons/position.png" style="width:20px;">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="title">Data Scientist</div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="descr">
-                                <ul>
-                                    <li>
-                                        Gathered and processed customer transaction data, product information, and sales records
-                                    </li>
-                                    <li>
-                                        Integrated IoT sensors and devices into the existing infrastructure for real-time data collection
-                                    </li>
-                                    <li>
-                                        Managed databases, including PostgreSQL, and InfluxDB, for data storage and organization
-                                    </li>
-                                    <li>
-                                        Developed data collection scripts using Python to interact with IoT devices
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="prof" id="prof_2">
-                        <li class="profession_type_1">
-                            <div class="prof_table_div">
-                                <table class="table_prof">
-                                    <tr>
-                                        <td class="profession_table_column" id="1">
-                                            <div class="profession_icon">
-                                                <img src="images/icons/company.png" style="width:25px;">
-                                            </div>
-                                        </td>
-                                        <td class="profession_table_column" id="2">
-                                            <div class="title">İşBank, Frankfurt</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="position_icon_div">
-                                                <img src="images/icons/position.png" style="width:20px;">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="title">Machine Learning Engineer</div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="descr">
-                                <ul>
-                                    <li>
-                                        Microsoft Azure cloud computing services
-                                    </li>
-                                    <li>
-                                        Agile software development
-                                    </li>
-                                    <li>
-                                        Creating and maintaining databases with using MySQL and SQL
-                                    </li>
-                                    <li>
-                                        Solving problems using Python and PowerShell script
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="prof" id="prof_3">
-                        <li class="profession_type_1">
-                            <div class="prof_table_div">
-                                <table class="table_prof">
-                                    <tr>
-                                        <td class="profession_table_column" id="1">
-                                            <div class="profession_icon">
-                                                <img src="images/icons/company.png" style="width:25px;">
-                                            </div>
-                                        </td>
-                                        <td class="profession_table_column" id="2">
-                                            <div class="title">TÜBİTAK</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="position_icon_div">
-                                                <img src="images/icons/position.png" style="width:20px;">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="title">AI Researcher</div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            
-                            <div class="descr">
-                                <ul>
-                                    <li>
-                                        Working on the multidisciplinary project supported by TÜBİTAK.
-                                    </li>
-                                    <li>
-                                        Working on the Background Subtraction methods on the live stream scene. Most of the methods are made from scratch to satisfy the necessary effects
-                                    </li>
-                                    <li>
-                                        Using Python to implement the algorithms. Working with OpenCV, Scikit-İmage, NumPy modules to write expressive code
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="prof" id="prof_4">
-                        <li class="profession_type_1">
-                            <div class="prof_table_div">
-                                <table class="table_prof">
-                                    <tr>
-                                        <td class="profession_table_column" id="1">
-                                            <div class="profession_icon">
-                                                <img src="images/icons/company.png" style="width:25px;">
-                                            </div>
-                                        </td>
-                                        <td class="profession_table_column" id="2">
-                                            <div class="title">LBMS</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="position_icon_div">
-                                                <img src="images/icons/position.png" style="width:20px;">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="title">AI Researcher</div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="descr">
-                                <ul>
-                                    <li>
-                                        Using standard techniques and optimization algorithms and build neural networks
-                                    </li>
-                                    <li>
-                                        Using strategies for reducing errors in ML systems, understand complex ML settings, and apply end-to-end, transfer, and multi-task learning
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </div>
-                    <div class="prof" id="prof_5">
-                        <li class="profession_type_1">
-                            <div class="prof_table_div">
-                                <table class="table_prof">
-                                    <tr>
-                                        <td class="profession_table_column" id="1">
-                                            <div class="profession_icon">
-                                                <img src="images/icons/company.png" style="width:25px;">
-                                            </div>
-                                        </td>
-                                        <td class="profession_table_column" id="2">
-                                            <div class="title">Non-RNA Lab</div>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>
-                                            <div class="position_icon_div">
-                                                <img src="images/icons/position.png" style="width:20px;">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            <div class="title">AI Researcher</div>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </div>
-                            <div class="descr">
-                                <ul>
-                                    <li>
-                                        Apply data science tools and techniques. Getting, cleaning, and exploring data, programming in R and Python, and conducting reproducible research
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                    </div>
-                </ul>
-            </div>
-
-            <div id="awards" class="section">
-                <div class="Headers">
-                    <h1>Awards</h1>
-                </div>
-
-                <div class="award_class" id="5">
-                    <div class="award_header_div">
-                        <table class="award_table">
-                            <tr>
-                                <td>
-                                    <div class="success_icon">
-                                        <img src="images/icons/success.png" class="success_icon_img">
-                                    </div>
-                                </td>
-                                <td class="success_name">
-                                    <h2 class="award_header">1st Ranked Student</h2>
-                                </td>
-                            </tr>
-                            
-                        </table>
-                    </div>
-                    
-                    <div class="award_picture" id="5">
-                        <img src="images/ceremony/IMG_6377.JPG" class="award_pict">
-                        
-                    </div>
-                    <div class="award_desc_container">
-                        <div class="award_description_arrow" onclick="showAwardDesc(5)" id="5">
-                            <img src="images/buttons/arrow_down_wight.png" class="down_arrow" id="5">
-                        </div>
-                    </div>
-                    <div class="award_description" id ="5">
-                        <div class="award_desc">
-                            <p>
-                            Award for being the 1st ranked student in Computer Engineering department and 2nd ranked student in the Engineering Faculty!
-                            <br><br>
-                            Please visit <a href="https://en.iyte.edu.tr/student/rectors-list/">this site</a> to see the rector's list for the 2024 graduation.
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="award_class" id="1">
-                    <div class="award_header_div">
-                        <table class="award_table">
-                            <tr>
-                                <td>
-                                    <div class="success_icon">
-                                        <img src="images/icons/success.png" class="success_icon_img">
-                                    </div>
-                                </td>
-                                <td class="success_name">
-                                    <h2 class="award_header">1st Place in Hackathon Hack4Treat</h2>
-                                </td>
-                            </tr>
-                            
-                        </table>
-                    </div>
-                    
-                    <div class="award_picture" id="1">
-                        <img src="images/cagin (2).jpeg" class="award_pict">
-                        
-                    </div>
-                    <div class="award_desc_container">
-                        <div class="award_description_arrow" onclick="showAwardDesc(1)" id="1">
-                            <img src="images/buttons/arrow_down_wight.png" class="down_arrow" id="1">
-                        </div>
-                    </div>
-                    <div class="award_description" id ="1">
-                        <div class="award_desc">
-                            <p>
-                            Our team (Epione) participated in a prestigious competition 
-                            focused on utilizing artificial intelligence to develop 
-                            innovative solutions for individuals with disabilities 
-                            resulting from stroke. Through our collaborative efforts and 
-                            groundbreaking approach, we successfully secured the first-place position. 
-                            This achievement not only earned us a substantial prize of 25,000 TL but also 
-                            provided us with the opportunity to establish a startup company within our 
-                            university’s technology center.
-                            <br><br>
-                            Please visit <a href="https://bulten.iyte.edu.tr/2021/11/11/hack4treat-hackathonu-odulleri-sahiplerini-buldu-2/">this site</a> in order to reach the original competition results.
-                            </p>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="award_class" id="2">
-                    <div class="award_header_div">
-                        <table class="award_table">
-                            <tr>
-                                <td>
-                                    <div class="success_icon">
-                                        <img src="images/icons/success.png" class="success_icon_img">
-                                    </div>
-                                </td>
-                                <td class="success_name">
-                                    <h2 class="award_header">1st Place in High Technology Awards</h2>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="award_picture" id="2">
-                        <img src="images/cagin (3).png" class="award_pict">
-                        <img src="images/buttons/next_button.png" class="next_button" onclick='showPicture(this, 2)'>
-                    </div>
-                    <div class="award_desc_container" onclick="showAwardDesc(2)" id="2">
-                        <div class="award_description_arrow">
-                            <img src="images/buttons/arrow_down_wight.png" class="down_arrow" id="2">
-                        </div>
-                    </div>
-                    <div class="award_description" id="2">
-                        <div class="award_desc">
-                            <p>
-                                Our startup, which focuses on creating advanced AI solutions to treat stroke patients, 
-                                has been honored with the "High Technology Award." This accolade recognizes our commitment to 
-                                leveraging cutting-edge technology to address critical healthcare challenges. The award highlights 
-                                our innovative approach and the significant impact our solutions have on enhancing the quality 
-                                of life for individuals affected by stroke.
-                            <br><br>
-                            Please visit <a href="https://teknoparkizmir.com.tr/tr/haberler/teknopark-tan-haberler/teknopark-izmir-yuksek-teknoloji-odulleri-4-kez-sahiplerini-buldu/">this site</a> to read the original content.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <br>
-                <div class="Headers">
-                    <h1>Programs</h1>
-                </div>
-                <div class="award_class" id="3">
-                    <div class="award_header_div">
-                        <table class="award_table">
-                            <tr>
-                                <td>
-                                    <div class="success_icon">
-                                        <img src="images/icons/international_program.png" class="success_icon_img">
-                                    </div>
-                                </td>
-                                <td class="success_name">
-                                    <h2 class="award_header">Global Leadership Program</h2>
-                                </td>
-                            </tr>
-                            
-                        </table>
-                    </div>
-                    <div class="award_picture" id="3">
-                        <img src="images/glb/DSC08668.JPG" class="award_pict">
-                        <img src="images/buttons/next_button.png" class="next_button" onclick='showPicture(this, 3)'>
-                    </div>
-                    <div class="award_desc_container" onclick="showAwardDesc(3)" id="3">
-                        <div class="award_description_arrow">
-                            <img src="images/buttons/arrow_down_wight.png" class="down_arrow" id="3">
-                        </div>
-                    </div>
-                    <div class="award_description" id="3">
-                        <div class="award_desc">
-                            <p>
-                                Global Leadership Program at UC Berkeley's International House allowed us a privilege of learning about diverse cultures, values, and norms from individuals around the world.
-                                We gained insights into effective communication and how to engage with others in an organized way. The program taught me the essence of global collaboration and leadership.
-                            <br><br>
-                            Please visit <a href="https://ihouse.berkeley.edu/resident-life/social-impact-opportunities/global-leadership-program">this site</a> to learn more about the program.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div id="contact" class="section">
-                <div class="Headers">
-                    <h1>Contact</h1>
-                </div>
-                <br>
-                <div class="contact_div">
-                    <div class="contact_2" onclick="showContactTable(this)">
-                        <h1>Professional</h1>    
-                    </div>
-                    
-                    <table class="contact_table_2" style="display: none;">
-                        <tr>
-                            <td class="col1">
-                                <div class="researchgate_contact">
-                                    <img src="images/icons/researchgate.png" class="col_img">
-                                </div>
-                            </td>
-                            <td class="col2"><a href="https://www.researchgate.net/profile/Cagin-Tunc">Research Gate</a></td>
-                        </tr>
-                        <tr>
-                            <td class="col1">
-                                <div class="github_contact">
-                                    <img src="images/icons/github_icon.png" class="col_img">
-                                </div>
-                            </td>
-
-                            <td class="col2"><a href="https://github.com/cagintunc">GitHub</a></td>
-                        </tr>
-                        <tr>
-                            <td class="col1">
-                                <div class="berkeley_contact">
-                                    <img src="images/universities/berkeley_cal.png" class="col_img">
-                                </div>
-                            </td>
-                            <td class="col2"><a href="mailto:cagin_tunc@berkeley.edu">Berkeley</a></td>
-                        </tr>
-                        <tr>
-                            <td class="col1">
-                                <div class="personal_email_contact">
-                                    <img src="images/icons/email_send_icon.png" class="col_img">
-                                </div>
-                            </td>
-                            <td class="col2"><a href="mailto:cagintunc@hotmail.com">Personal</a></td>
-                        </tr>
-                    </table>
-                    <br>
-                    <div class="contact_1" onclick="showContactTable(this)">
-                        <h1>Social Media</h1>    
-                    </div>
-                    <table class="contact_table_1" style="display: none">
-                        
-                        <tr>
-                            <td class="col1">
-                                <div class="instagram_contact">
-                                    <img src="images/icons/instagram_icon.png" class="col_img">
-                                </div>
-                            </td>
-                            <td class="col2">cagintunc</td>
-                        </tr>
-                        <tr>
-                            <td class="col1">
-                                <div class="discord_contact">
-                                    <img src="images/icons/discord.png" class="col_img">
-                                </div>
-                            </td>
-                            <td class="col2">cagintunc</td>
-                        </tr>
-                        <tr>
-                            <td class="col1">
-                                <div class="linkedin_contact">
-                                    <img src="images/icons/linkedin_social_icon.png" class="col_img">
-                                </div>
-                            </td>
-                            <td class="col2"><a href='https://www.linkedin.com/in/çağın-tunç-computer-scientist/'>LinkedIn</href></td>
-                        </tr>
-                    </table>
-                    <div class="contact_vector">
-                        <img src="images/backgrounds/communication_transparent.png" class="communication">
-                    </div>
-                </div>
-            </div>
-
-            <div id="projects" class="section">
-                <div class="Headers">
-                    <h1>Projects</h1>
-                </div>
-
-
-                <div class="project_container_table" id="1" onclick="showProjectDescription(1)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Single Cell Analyzer App</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="1">
-                        <div class="project_desc">
-                            <p>Engineered a single-cell analyzer application that processed genomic data with faster computational speed, enhancing cellular analysis and advancing personalized medicine research.
-                            </p>
-                        </div>
-                        <div class="project_links">
-                            <table>
-                                <tr>
-                                    <td class="project_table_col1">
-                                        <a href="https://github.com/cagintunc/single_cell_analysis">
-                                            <img src="images/icons/github_icon.png" class="github_project_code">
-                                        </a>
-                                    </td>
-                                    <td class="project_table_col2">
-                                        /single_cell_analysis
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div> 
-
-                <div class="project_container_table" id="2" onclick="showProjectDescription(2)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Local Jbrowse2 Downloader</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="2">
-                        <div class="project_desc">
-                            <p>
-                                Engineered the Local Jbrowse2 Downloader, enabling seamless genomic data retrieval with a reduction in download time, and incorporated user 
-                                feedback for continuous enhancement
-                            </p>
-                        </div>
-                        <div class="project_links">
-                            <table>
-                                <tr>
-                                    <td class="project_table_col1">
-                                        <a href="https://github.com/cagintunc/331_final_project">
-                                            <img src="images/icons/github_icon.png" class="github_project_code">
-                                        </a>
-                                    </td>
-                                    <td class="project_table_col2">
-                                        /331_final_project
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-                
-                <div class="project_container_table" id="3" onclick="showProjectDescription(3)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Swipely - CalHacks 2024</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="3">
-                        <div class="project_desc">
-                            <p>
-                                Swipe.ly is an AI-powered email app that learns your preferences through swipes. Using NLP, it analyzes emails and adapts to your habits—for instance, swiping left on certain email types teaches the app to filter similar messages in the future. This creates a smarter, clutter-free inbox tailored to your needs, ensuring you see only what matters.
-                            <br><br>
-                            Please visit <a href="https://devpost.com/software/swipe-ly">this site</a> to reach the project's CalHacks site.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project_container_table" id="4" onclick="showProjectDescription(4)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">SyllaBot</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="4">
-                        <div class="project_desc">
-                            <p>
-                                NLP-based web application that scans PDF books and extracts relevant data to construct comprehensive and tailored syllabi. It’s a game-changer for both teachers and students, saving time and ensuring high-quality content.
-                            <br><br>
-                            </p>
-                        </div>
-                        <div class="project_video" id="4">
-                            <iframe 
-                                width="95%" 
-                                height="300" 
-                                src="https://www.youtube.com/embed/LtDo7-eoXRE" 
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                    
-                </div>
-
-                <div class="project_container_table" id="5" onclick="showProjectDescription(5)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Hygieia</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="5">
-                        <div class="project_desc">
-                            <p>
-                                Hygea is an innovative waste management solution leveraging automation, artificial intelligence, and image processing to revolutionize recycling practices. Inspired by the Greek goddess of health and cleanliness, Hygea aims to address global waste management challenges, such as inefficient recycling practices and overflowing bins, by streamlining waste sorting and management. The system utilizes advanced tools like Arduino microcontrollers, ultrasonic sensors, and OpenCV-based image processing to identify and sort recyclable materials effectively. With applications ranging from household recycling to community programs, Hygea promotes environmental sustainability and resource conservation, paving the way for a cleaner, greener future. 
-                            <br><br>
-                        </p>
-                        </div>
-                        <div class="project_video" id="5">
-                            <iframe 
-                                width="95%" 
-                                height="300" 
-                                src="https://www.youtube.com/embed/X7kK5hSXUno" 
-                                title="YouTube video player" 
-                                frameborder="0" 
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                                allowfullscreen>
-                            </iframe>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project_container_table" id="6" onclick="showProjectDescription(6)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Miles of 
-                                        Empowerment</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="6">
-                        <div class="project_desc">
-                            <p> 
-                                Hair donation website for well-known companies, 
-                                encouraging them to donate hair for cancer 
-                                patients and support charitable competitions. 
-                            <br><br>
-                            To see the deployed website please click <a href="https://hair-donation.onrender.com/">here</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project_container_table" id="7" onclick="showProjectDescription(7)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Ambrosia</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="7">
-                        <div class="project_desc">
-                            <p>
-                                Ambrosia is a platform designed to facilitate the search process in menus for those who have a specific dietary preference or food allergy. 
-                            <br><br>
-                            To see the deployed website please click <a href="https://ambrosia-3rho.onrender.com/landing">here</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project_container_table" id="8" onclick="showProjectDescription(8)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Student Council 
-                                        Election Website</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="8">
-                        <div class="project_desc">
-                            <p>
-                                The web application that is aimed to 
-                                automate the election process for IZTECH student 
-                                council, for the first round of department 
-                                representative election. 
-                            <br><br>
-                            To see the deployed website please click <a href="https://election-6h92.onrender.com/login">here</a>.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project_container_table" id="9" onclick="showProjectDescription(9)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">TÜBİTAK-2247 
-                                        (STAR Project)</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="9">
-                        <div class="project_desc">
-                            <p>
-                                A computer vision and data science project which was supported by the Scientific and Technological Research Council of Türkiye. 
-                            <br><br>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project_container_table" id="10" onclick="showProjectDescription(10)">
-                    <table class="award_table">
-                        <tr>
-                            <td>
-                                <div class="success_icon">
-                                    <img src="images/icons/project_icon.png" class="project_icon">
-                                </div>
-                            </td>
-                            <td class="project_name_col">
-                                <div class="project_name" id="success_names_project">
-                                    <h2 class="award_header">Epione App - Hack4Treat/ 
-                                        Hackathon</h2>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                    <div class="project_arrow_down">
-                        <img src="images/buttons/arrow_down.png" class="down_arrow_projects">
-                    </div>
-                    
-                    <div class="project_description" id="10">
-                        <div class="project_desc">
-                            <p>
-                                An advanced machine learning and artificial intelligence project aimed at identifying and providing remote rehabilitation for stroke patients who face challenges in regular hospital visits.
-                            </p>
-                        </div>
-                        <div class="project_links">
-                            <table>
-                                <tr>
-                                    <td class="project_table_col1">
-                                        <a href="https://github.com/cagintunc/Stroke-Detection">
-                                            <img src="images/icons/github_icon.png" class="github_project_code">
-                                        </a>
-                                    </td>
-                                    <td class="project_table_col2">
-                                        /Stroke-Detection
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-
-
-
-            </div>
-        </div>
+  <!-- ── NAVBAR ── -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">CT</a>
+      <div class="nav-links" id="navLinks">
+        <a href="#education"    class="nav-link">Education</a>
+        <a href="#experience"   class="nav-link">Experience</a>
+        <a href="#achievements" class="nav-link">Achievements</a>
+        <a href="#programs"     class="nav-link">Programs</a>
+        <a href="#projects"     class="nav-link">Projects</a>
+        <a href="#contact"      class="nav-link">Contact</a>
+      </div>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
     </div>
-            
-    <script src="script.js"></script>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section class="hero" id="hero">
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-glow"></div>
+        <img src="images/IMG_6282.jpg" alt="Çağın Tunç" class="hero-photo">
+      </div>
+      <div class="hero-text">
+        <span class="hero-greeting">Hello, I'm</span>
+        <h1 class="hero-name">Çağın Tunç</h1>
+        <p class="hero-role">
+          <span class="role-prefix">I'm a </span><span id="typedRole"></span>
+        </p>
+        <p class="hero-bio">
+          MEng graduate from <strong>UC Berkeley</strong> · AI/ML Researcher ·
+          Top-ranked Computer Engineering graduate from <strong>IZTECH</strong>
+        </p>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-value">3.95</span>
+            <span class="stat-label">Berkeley GPA</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">3.95</span>
+            <span class="stat-label">CS GPA</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">5+</span>
+            <span class="stat-label">Roles</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-value">10+</span>
+            <span class="stat-label">Projects</span>
+          </div>
+        </div>
+        <div class="hero-links">
+          <a href="https://github.com/cagintunc" class="hero-btn primary" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/%C3%A7a%C4%9F%C4%B1n-tun%C3%A7-computer-scientist/" class="hero-btn primary" target="_blank">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://www.researchgate.net/profile/Cagin-Tunc" class="hero-btn secondary" target="_blank">ResearchGate</a>
+          <a href="mailto:cagin_tunc@berkeley.edu" class="hero-btn secondary">Email Me</a>
+        </div>
+      </div>
+    </div>
+    <a href="#education" class="scroll-down" aria-label="Scroll down">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 10l5 5 5-5"/></svg>
+    </a>
+  </section>
+
+  <!-- ── EDUCATION ── -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Background</span>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="education-timeline">
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <img src="images/universities/UC-Berkeley-Seal-Logo.png" alt="UC Berkeley" class="edu-logo" onclick="window.open('https://berkeley.edu','_blank')">
+              <div class="timeline-info">
+                <h3>University of California, Berkeley</h3>
+                <span class="degree">Master of Engineering</span>
+                <span class="timeline-period">2024 — 2025 &nbsp;·&nbsp; Berkeley, CA, USA</span>
+              </div>
+              <div class="gpa-badge">
+                <span class="gpa-value">3.95</span>
+                <span class="gpa-label">GPA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <img src="images/universities/iyte_logo-tur.png" alt="IZTECH" class="edu-logo" onclick="window.open('https://iyte.edu.tr','_blank')">
+              <div class="timeline-info">
+                <h3>İzmir Institute of Technology</h3>
+                <span class="degree">B.Sc. Computer Engineering</span>
+                <span class="timeline-period">2020 — 2024 &nbsp;·&nbsp; İzmir, Turkey</span>
+              </div>
+              <div class="gpa-badge">
+                <span class="gpa-value">3.95</span>
+                <span class="gpa-label">GPA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-marker"></div>
+          <div class="timeline-card">
+            <div class="timeline-card-header">
+              <img src="images/universities/iyte_logo-tur.png" alt="IZTECH" class="edu-logo">
+              <div class="timeline-info">
+                <h3>İzmir Institute of Technology</h3>
+                <span class="degree">Bioengineering (transferred to CS)</span>
+                <span class="timeline-period">2018 — 2020 &nbsp;·&nbsp; İzmir, Turkey</span>
+              </div>
+              <div class="gpa-badge">
+                <span class="gpa-value">3.91</span>
+                <span class="gpa-label">GPA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── EXPERIENCE ── -->
+  <section class="section section-alt" id="experience">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Career</span>
+        <h2 class="section-title">Experience</h2>
+      </div>
+      <div class="experience-grid">
+
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+            </div>
+            <div class="exp-info">
+              <h3>Software Engineer (Computer Vision)</h3>
+              <span class="exp-company">InSyte Bio</span>
+              <span class="exp-meta">San Francisco Bay Area · On-site &nbsp;·&nbsp; Nov 2025 — Present</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">Computer Vision</span><span class="tag">Augmented Reality</span>
+            <span class="tag">Endoscope</span><span class="tag">Calibration</span>
+          </div>
+          <p class="exp-desc">Software engineering focused on computer vision and augmented reality for medical endoscope systems, including camera calibration and real-time image processing pipelines.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 3H4v10c0 2.21 1.79 4 4 4h6c2.21 0 4-1.79 4-4v-3h2c1.11 0 2-.89 2-2V5c0-1.11-.89-2-2-2zm0 5h-2V5h2v3zM4 19h16v2H4z"/></svg>
+            </div>
+            <div class="exp-info">
+              <h3>Software Engineer</h3>
+              <span class="exp-company">bitHuman</span>
+              <span class="exp-meta">Silicon Valley, CA · Remote &nbsp;·&nbsp; Jul 2025 — Nov 2025</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">JavaScript</span><span class="tag">Supabase</span>
+            <span class="tag">Figma</span><span class="tag">Clerk</span><span class="tag">Cursor AI</span>
+          </div>
+          <p class="exp-desc">Built a full-stack web application using Supabase for backend services, Clerk for authentication, and Cursor AI for AI-assisted development. Applied Figma for UI design and compared HCI techniques to improve user interaction.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+            </div>
+            <div class="exp-info">
+              <h3>Data Scientist</h3>
+              <span class="exp-company">Eczacıbaşı</span>
+              <span class="exp-meta">Turkey</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">Python</span><span class="tag">PostgreSQL</span>
+            <span class="tag">InfluxDB</span><span class="tag">IoT</span>
+          </div>
+          <p class="exp-desc">Customer data collection and processing, IoT sensor integration, and database management for enterprise-scale analytics pipelines.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+            </div>
+            <div class="exp-info">
+              <h3>Machine Learning Engineer</h3>
+              <span class="exp-company">İşBank</span>
+              <span class="exp-meta">Frankfurt, Germany</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">Azure</span><span class="tag">Python</span>
+            <span class="tag">MySQL</span><span class="tag">Agile</span>
+          </div>
+          <p class="exp-desc">Microsoft Azure cloud services, Agile workflows, and automation with Python &amp; PowerShell for one of Europe's largest banks.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82z"/></svg>
+            </div>
+            <div class="exp-info">
+              <h3>AI Researcher</h3>
+              <span class="exp-company">TÜBİTAK</span>
+              <span class="exp-meta">Turkey</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">Computer Vision</span><span class="tag">OpenCV</span>
+            <span class="tag">Python</span><span class="tag">Scikit-Image</span>
+          </div>
+          <p class="exp-desc">Background subtraction methods and computer vision algorithms for Turkey's national scientific and technological research council.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-1 16H4v-2h16v2zm0-5H4V5h16v9z"/></svg>
+            </div>
+            <div class="exp-info">
+              <h3>AI Researcher</h3>
+              <span class="exp-company">LBMS Lab</span>
+              <span class="exp-meta">IZTECH</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">Deep Learning</span><span class="tag">Transfer Learning</span>
+            <span class="tag">Neural Networks</span>
+          </div>
+          <p class="exp-desc">Neural network development, ML optimisation, error reduction, and multi-task learning research for computer vision applications.</p>
+        </div>
+
+        <div class="exp-card reveal">
+          <div class="exp-card-header">
+            <div class="exp-icon">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2V5a2 2 0 00-2-2zm-7 15.5c-3.59 0-6.5-2.91-6.5-6.5S8.41 5.5 12 5.5s6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"/></svg>
+            </div>
+            <div class="exp-info">
+              <h3>AI Researcher</h3>
+              <span class="exp-company">Non-RNA Lab</span>
+              <span class="exp-meta">UC Berkeley</span>
+            </div>
+          </div>
+          <div class="exp-tags">
+            <span class="tag">R</span><span class="tag">Python</span>
+            <span class="tag">Bioinformatics</span><span class="tag">Data Science</span>
+          </div>
+          <p class="exp-desc">Reproducible genomics research using R and Python data science tools for non-coding RNA analysis at UC Berkeley.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ACHIEVEMENTS ── -->
+  <section class="section section-alt" id="achievements">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Recognition</span>
+        <h2 class="section-title">Achievements</h2>
+      </div>
+      <div class="achievements-grid">
+
+        <div class="achievement-card reveal">
+          <div class="achievement-badge">🏆</div>
+          <div class="achievement-content">
+            <h3>1st Ranked Student</h3>
+            <p class="achievement-sub">Computer Engineering Dept · 2nd in Faculty of Engineering</p>
+            <p class="achievement-desc">Rector's List 2024 — highest academic performance in the department and second-highest across the entire Engineering Faculty at IZTECH.</p>
+            <div class="achievement-gallery">
+              <img src="images/ceremony/rektörün_liste.jfif"           alt="Rector's List"          class="gallery-img" onclick="openLightbox(this.src)">
+              <img src="images/ceremony/rektörün_liste_ailelerle.jfif" alt="Rector's List Family"    class="gallery-img" onclick="openLightbox(this.src)">
+              <img src="images/ceremony/IMG_6115.JPG"                  alt="Ceremony"               class="gallery-img" onclick="openLightbox(this.src)">
+              <img src="images/ceremony/IMG_6116.JPG"                  alt="Ceremony"               class="gallery-img" onclick="openLightbox(this.src)">
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-badge">🥇</div>
+          <div class="achievement-content">
+            <h3>1st Place — Hack4Treat Hackathon</h3>
+            <p class="achievement-sub">Team Epione · ₺25,000 Prize</p>
+            <p class="achievement-desc">Led Team Epione to first place with an AI solution for stroke patient rehabilitation. Co-founded Epione as a startup in the university technology centre.</p>
+            <div class="achievement-gallery">
+              <img src="images/cagin (3).png"         alt="Hack4Treat Award" class="gallery-img" onclick="openLightbox(this.src)">
+              <img src="images/cagin (4).png"         alt="Hack4Treat Award" class="gallery-img" onclick="openLightbox(this.src)">
+              <img src="images/ceremony/IMG_6377.JPG" alt="Award Ceremony"   class="gallery-img" onclick="openLightbox(this.src)">
+            </div>
+          </div>
+        </div>
+
+        <div class="achievement-card reveal">
+          <div class="achievement-badge">🏅</div>
+          <div class="achievement-content">
+            <h3>1st Place — High Technology Awards</h3>
+            <p class="achievement-sub">Teknopark Izmir</p>
+            <p class="achievement-desc">Advanced AI solutions for stroke rehabilitation earned the top prize at Teknopark Izmir's High Technology Awards, recognising innovation in applied AI.</p>
+            <div class="achievement-gallery">
+              <img src="images/ceremony/IMG_6381.JPG" alt="High Tech Award" class="gallery-img" onclick="openLightbox(this.src)">
+              <img src="images/ceremony/IMG_6382.JPG" alt="High Tech Award" class="gallery-img" onclick="openLightbox(this.src)">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROGRAMS ── -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Leadership</span>
+        <h2 class="section-title">Programs</h2>
+      </div>
+      <div class="program-card reveal">
+        <div class="program-icon">
+          <img src="images/universities/UC-Berkeley-Seal-Logo.png" alt="UC Berkeley" class="program-logo">
+        </div>
+        <div class="program-content">
+          <h3>Global Leadership Program</h3>
+          <p class="program-org">UC Berkeley — International House</p>
+          <p class="program-desc">A transformative cross-cultural leadership program at Berkeley's International House, developing global perspective, communication excellence, and leadership capabilities through deep collaboration with international scholars from across the world.</p>
+          <div class="program-gallery">
+            <img src="images/glb/DSC08644.JPG" alt="GLB Program" class="gallery-img" onclick="openLightbox(this.src)">
+            <img src="images/glb/DSC08668.JPG" alt="GLB Program" class="gallery-img" onclick="openLightbox(this.src)">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── PROJECTS ── -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Work</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Click any card to expand details, videos &amp; links.</p>
+      </div>
+      <div class="projects-grid">
+
+        <div class="project-card featured reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag featured-tag">AI · Healthcare · 1st Place</span>
+              <div class="project-links">
+                <a href="https://github.com/cagintunc/Stroke-Detection" target="_blank" class="proj-link" title="GitHub" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Epione App</h3>
+            <p class="project-desc">AI/ML stroke patient rehabilitation application — 1st place at Hack4Treat hackathon (₺25,000 prize). Co-founded Epione startup at university tech centre.</p>
+            <div class="project-tech"><span>AI/ML</span><span>Healthcare</span><span>Python</span><span>Startup</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Repository preview</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://github.com/cagintunc/Stroke-Detection" target="_blank" class="github-preview-link" onclick="event.stopPropagation()">
+              <div class="github-preview">
+                <img src="https://opengraph.githubassets.com/1/cagintunc/Stroke-Detection" alt="Stroke-Detection repo" loading="lazy">
+                <div class="github-preview-footer">
+                  <span class="repo-name">cagintunc / Stroke-Detection</span>
+                  <span class="repo-link">View on GitHub →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">AI · NLP · CalHacks 2024</span>
+              <div class="project-links"></div>
+            </div>
+            <h3 class="project-name">Swipely</h3>
+            <p class="project-desc">AI-powered email filtering app built at UC Berkeley's CalHacks 2024 — the world's largest collegiate hackathon. Uses NLP to intelligently triage and categorise inboxes in real time.</p>
+            <div class="project-tech"><span>NLP</span><span>Python</span><span>AI</span><span>CalHacks</span></div>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">NLP · Education</span>
+              <div class="project-links"></div>
+            </div>
+            <h3 class="project-name">SyllaBot</h3>
+            <p class="project-desc">Intelligent chatbot that parses PDF syllabi using NLP, letting students instantly query course information, deadlines, and policies.</p>
+            <div class="project-tech"><span>NLP</span><span>PDF Parsing</span><span>Python</span><span>Chatbot</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Watch demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://www.youtube.com/watch?v=LtDo7-eoXRE" target="_blank" class="yt-preview" onclick="event.stopPropagation()">
+              <img src="https://img.youtube.com/vi/LtDo7-eoXRE/hqdefault.jpg" alt="SyllaBot demo">
+              <div class="yt-overlay">
+                <svg viewBox="0 0 68 48"><rect width="68" height="48" rx="10" fill="#FF0000"/><path d="M27 15l20 9-20 9V15z" fill="white"/></svg>
+                <span>Watch on YouTube</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">AI · IoT</span>
+              <div class="project-links"></div>
+            </div>
+            <h3 class="project-name">Hygieia</h3>
+            <p class="project-desc">Smart waste management system combining Arduino hardware with OpenCV computer vision to automatically classify and sort waste streams.</p>
+            <div class="project-tech"><span>Arduino</span><span>OpenCV</span><span>Python</span><span>IoT</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Watch demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://www.youtube.com/watch?v=X7kK5hSXUno" target="_blank" class="yt-preview" onclick="event.stopPropagation()">
+              <img src="https://img.youtube.com/vi/X7kK5hSXUno/hqdefault.jpg" alt="Hygieia demo">
+              <div class="yt-overlay">
+                <svg viewBox="0 0 68 48"><rect width="68" height="48" rx="10" fill="#FF0000"/><path d="M27 15l20 9-20 9V15z" fill="white"/></svg>
+                <span>Watch on YouTube</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">Bioinformatics</span>
+              <div class="project-links">
+                <a href="https://github.com/cagintunc/single_cell_analysis" target="_blank" class="proj-link" title="GitHub" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Single Cell Analyzer</h3>
+            <p class="project-desc">Desktop application for processing and visualising genomic single-cell sequencing data, streamlining complex bioinformatics analysis.</p>
+            <div class="project-tech"><span>Python</span><span>Genomics</span><span>Data Analysis</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Repository preview</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://github.com/cagintunc/single_cell_analysis" target="_blank" class="github-preview-link" onclick="event.stopPropagation()">
+              <div class="github-preview">
+                <img src="https://opengraph.githubassets.com/1/cagintunc/single_cell_analysis" alt="single_cell_analysis repo" loading="lazy">
+                <div class="github-preview-footer">
+                  <span class="repo-name">cagintunc / single_cell_analysis</span>
+                  <span class="repo-link">View on GitHub →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">Bioinformatics</span>
+              <div class="project-links">
+                <a href="https://github.com/cagintunc/331_final_project" target="_blank" class="proj-link" title="GitHub" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Local JBrowse2 Downloader</h3>
+            <p class="project-desc">Optimised tool for retrieving large genomic datasets from JBrowse2 genome browsers, significantly reducing data retrieval overhead.</p>
+            <div class="project-tech"><span>Python</span><span>Genomics</span><span>Automation</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Repository preview</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://github.com/cagintunc/331_final_project" target="_blank" class="github-preview-link" onclick="event.stopPropagation()">
+              <div class="github-preview">
+                <img src="https://opengraph.githubassets.com/1/cagintunc/331_final_project" alt="JBrowse2 repo" loading="lazy">
+                <div class="github-preview-footer">
+                  <span class="repo-name">cagintunc / 331_final_project</span>
+                  <span class="repo-link">View on GitHub →</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">Web · AI</span>
+              <div class="project-links">
+                <a href="https://ambrosia-3rho.onrender.com/landing" target="_blank" class="proj-link" title="Live Demo" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Ambrosia</h3>
+            <p class="project-desc">Smart restaurant menu search engine that matches dietary preferences and allergy constraints to curated food options using NLP ranking.</p>
+            <div class="project-tech"><span>Python</span><span>NLP</span><span>Web</span><span>Render</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Live demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://ambrosia-3rho.onrender.com/landing" target="_blank" class="live-link-btn" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+              <div><strong>Open Ambrosia</strong><br><span>ambrosia-3rho.onrender.com</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">Web · Social Impact</span>
+              <div class="project-links">
+                <a href="https://hair-donation.onrender.com/" target="_blank" class="proj-link" title="Live Demo" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Miles of Empowerment</h3>
+            <p class="project-desc">Hair donation coordination platform connecting donors with charitable organisations supporting cancer patients undergoing chemotherapy.</p>
+            <div class="project-tech"><span>Web Dev</span><span>Render</span><span>Social Impact</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Live demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://hair-donation.onrender.com/" target="_blank" class="live-link-btn" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+              <div><strong>Open Miles of Empowerment</strong><br><span>hair-donation.onrender.com</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">Web · Civic Tech</span>
+              <div class="project-links">
+                <a href="https://election-6h92.onrender.com/login" target="_blank" class="proj-link" title="Live Demo" onclick="event.stopPropagation()">
+                  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-name">Student Council Election</h3>
+            <p class="project-desc">Automated online voting system for IZTECH student council elections — secure ballot submission and real-time result tallying.</p>
+            <div class="project-tech"><span>Web Dev</span><span>Python</span><span>Render</span></div>
+            <button class="project-expand-btn" onclick="toggleProject(this.closest('.project-card'))">
+              <span>Live demo</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg>
+            </button>
+          </div>
+          <div class="project-detail">
+            <a href="https://election-6h92.onrender.com/login" target="_blank" class="live-link-btn" onclick="event.stopPropagation()">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5a2 2 0 00-2 2v14a2 2 0 002 2h14a2 2 0 002-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+              <div><strong>Open Election Site</strong><br><span>election-6h92.onrender.com</span></div>
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card reveal">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-tag">Research · Computer Vision</span>
+              <div class="project-links"></div>
+            </div>
+            <h3 class="project-name">TÜBİTAK-2247 STAR</h3>
+            <p class="project-desc">National research project on computer vision and applied data science, funded by Turkey's scientific and technological research council.</p>
+            <div class="project-tech"><span>Computer Vision</span><span>Python</span><span>Research</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get in Touch</span>
+        <h2 class="section-title">Contact</h2>
+      </div>
+      <div class="contact-content reveal">
+        <p class="contact-intro">Always open to new opportunities, research collaborations, and meaningful conversations.</p>
+        <div class="contact-grid">
+
+          <div class="contact-category">
+            <h4>Professional</h4>
+            <div class="contact-links">
+              <a href="mailto:cagin_tunc@berkeley.edu" class="contact-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                cagin_tunc@berkeley.edu
+              </a>
+              <a href="mailto:cagintunc@hotmail.com" class="contact-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                cagintunc@hotmail.com
+              </a>
+              <a href="https://github.com/cagintunc" class="contact-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                github.com/cagintunc
+              </a>
+              <a href="https://www.researchgate.net/profile/Cagin-Tunc" class="contact-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.581 0C2.513 0 0 2.513 0 5.581v12.838C0 21.487 2.513 24 5.581 24h12.838C21.487 24 24 21.487 24 18.419V5.581C24 2.513 21.487 0 18.419 0zm6.835 5.09c1.933 0 3.253.985 3.253 2.744 0 1.27-.718 2.123-1.8 2.529l2.19 3.495h-2.069l-1.89-3.198h-.76v3.198H9.647V5.09zm-.23 1.527h-.847v2.556h.847c.8 0 1.3-.434 1.3-1.278 0-.845-.5-1.278-1.3-1.278zm-1.53 7.452c0 2.084-1.3 3.34-3.36 3.34-2.06 0-3.36-1.256-3.36-3.34v-.13h1.72v.13c0 1.053.614 1.686 1.64 1.686 1.027 0 1.64-.633 1.64-1.686v-5.31h1.72z"/></svg>
+                ResearchGate Profile
+              </a>
+              <a href="https://www.linkedin.com/in/%C3%A7a%C4%9F%C4%B1n-tun%C3%A7-computer-scientist/" class="contact-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn Profile
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-category">
+            <h4>Social</h4>
+            <div class="contact-links">
+              <a href="https://instagram.com/cagintunc" class="contact-link" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                @cagintunc
+              </a>
+              <div class="contact-link non-link">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z"/></svg>
+                Discord: cagintunc
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Çağın Tunç &nbsp;·&nbsp; Computer Scientist &amp; AI/ML Engineer</p>
+    </div>
+  </footer>
+
+  <!-- ── LIGHTBOX ── -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <div class="lightbox-inner" onclick="event.stopPropagation()">
+      <img id="lightboxImg" src="" alt="Photo">
+      <button class="lightbox-close" onclick="closeLightbox()">&#x2715;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
